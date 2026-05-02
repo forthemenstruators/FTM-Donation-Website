@@ -178,58 +178,42 @@
     </head>
     <body class="bg-background text-on-background antialiased min-h-screen overflow-x-hidden flex flex-col pt-20">
         <!-- TopNavBar JSON Component -->
+        <!-- TopNavBar -->
         <nav
-            class="fixed top-0 w-full h-[15vh] pt-1 z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-orange-100/20 dark:border-stone-800 shadow-sm dark:shadow-none"
+            class="fixed pt-1 top-0 w-full h-[15vh] z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-orange-100/20 dark:border-stone-800 shadow-sm dark:shadow-none font-epilogue font-medium text-sm tracking-wide"
         >
             <div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
-                <!-- Brand -->
-                <div class="flex items-center gap-10">
+                <div class="text-2xl font-bold flex gap-10 items-center tracking-tight text-orange-800 dark:text-orange-100">
                     <img class="size-20" src="src/logo.png" alt="" />
-                    <a
-                        class="text-2xl font-semibold tracking-tight text-orange-800 dark:text-orange-100 font-epilogue"
-                        href="#"
-                    >
-                        FTM
-                    </a>
+                    FTM
                 </div>
-                <!-- Navigation Links (Web) -->
-                <div class="hidden md:flex space-x-8 items-center font-epilogue font-medium text-sm tracking-wide">
+                <div class="hidden md:flex space-x-6 items-center">
                     <a
-                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 text-[15px] font-semibold px-3 py-2"
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2"
                         href="index.html"
                         >Home</a
                     >
                     <a
-                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 text-[15px] font-semibold px-3 py-2"
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2"
                         href="about.html"
                         >About Us</a
                     >
                     <a
-                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 text-[15px] font-semibold px-3 py-2"
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2"
                         href="programs.html"
                         >Programs</a
                     >
-                    <!-- <a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 text-[15px] font-semibold px-3 py-2" href="impact.html">Impact</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 text-[15px] font-semibold px-3 py-2" href="get_involved.html">Get Involved</a> -->
                     <a
-                        class="text-orange-800 dark:text-orange-300 border-b-2 border-orange-700 pb-1 font-semibold hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-1 Active: scale-100 opacity-90 transition-transform"
+                        class="text-orange-800 dark:text-orange-300 border-b-2 border-orange-700 pb-1 font-semibold hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2"
                         href="contact.html"
                         >Contact</a
                     >
                 </div>
-                <!-- Trailing Action -->
-                <div class="hidden md:block">
-                    <a
-                        class="bg-primary text-on-primary font-label-caps text-label-caps py-2.5 px-6 rounded-full hover:scale-105 transition-transform duration-300 shadow-sm"
-                        href="donate.html"
-                    >
-                        Donate
-                    </a>
-                </div>
-                <!-- Mobile Menu Toggle -->
-                <button class="md:hidden text-orange-800 p-2">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
+                <a
+                    href="donate.html"
+                    class="bg-primary text-on-primary font-label-caps text-label-caps py-2.5 px-6 rounded-full hover:scale-105 transition-transform duration-300 shadow-sm"
+                    >Donate</a
+                >
             </div>
         </nav>
         <!-- Main Content Canvas -->

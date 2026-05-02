@@ -162,74 +162,44 @@
         </style>
     </head>
     <body class="antialiased min-h-screen flex flex-col pt-20">
-        <!-- TopNavBar (Generated from JSON) -->
-        <header
-            class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-orange-100/20 dark:border-stone-800 shadow-sm dark:shadow-none"
+        <!-- TopNavBar -->
+        <nav
+            class="fixed pt-1 top-0 w-full h-[15vh] z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-orange-100/20 dark:border-stone-800 shadow-sm dark:shadow-none font-epilogue font-medium text-sm tracking-wide"
         >
-            <nav class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
-                <!-- Brand Logo -->
-                <a class="text-2xl font-bold tracking-tight text-orange-800 dark:text-orange-100" href="#"> FTM </a>
-                <!-- Desktop Navigation -->
-                <ul class="hidden md:flex items-center space-x-6 font-epilogue font-medium text-sm tracking-wide">
-                    <li>
-                        <a
-                            class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2 block"
-                            href="index.html"
-                            >Home</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2 block"
-                            href="about.html"
-                            >About Us</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2 block"
-                            href="programs.html"
-                            >Programs</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2 block"
-                            href="impact.html"
-                            >Impact</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            class="text-orange-800 dark:text-orange-300 border-b-2 border-orange-700 pb-1 font-semibold hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2 block"
-                            href="get_involved.html"
-                            >Get Involved</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2 block"
-                            href="contact.html"
-                            >Contact</a
-                        >
-                    </li>
-                </ul>
-                <!-- Trailing Action -->
-                <div class="hidden md:flex items-center">
+            <div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+                <div class="text-2xl font-bold flex gap-10 items-center tracking-tight text-orange-800 dark:text-orange-100">
+                    <img class="size-20" src="src/logo.png" alt="" />
+                    FTM
+                </div>
+                <div class="hidden md:flex space-x-6 items-center">
                     <a
-                        class="font-epilogue font-medium text-sm tracking-wide bg-primary text-on-primary px-6 py-2.5 rounded-full hover:scale-105 transition-transform shadow-ambient"
-                        href="donate.html"
-                        >Donate</a
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2"
+                        href="index.html"
+                        >Home</a
+                    >
+                    <a
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2"
+                        href="about.html"
+                        >About Us</a
+                    >
+                    <a
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2"
+                        href="programs.html"
+                        >Programs</a
+                    >
+                    <a
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2"
+                        href="contact.html"
+                        >Contact</a
                     >
                 </div>
-                <!-- Mobile Menu Toggle (Simplified for purely visual structural adherence) -->
-                <div class="md:hidden flex items-center text-orange-800 dark:text-orange-200">
-                    <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0"
-                        >menu</span
-                    >
-                </div>
-            </nav>
-        </header>
+                <a
+                    href="donate.html"
+                    class="bg-primary text-on-primary font-label-caps text-label-caps py-2.5 px-6 rounded-full hover:scale-105 transition-transform duration-300 shadow-sm"
+                    >Donate</a
+                >
+            </div>
+        </nav>
         <main class="flex-grow flex flex-col w-full">
             <!-- Hero Section -->
             <section
