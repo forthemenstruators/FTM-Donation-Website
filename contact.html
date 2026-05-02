@@ -7,7 +7,11 @@
         <title>Contact Us - FTM</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com" rel="preconnect" />
-        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+        />
         <link
             href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
             rel="stylesheet"
@@ -176,14 +180,20 @@
             }
         </style>
     </head>
-    <body class="bg-background text-on-background antialiased min-h-screen overflow-x-hidden flex flex-col pt-20">
+    <body
+        class="bg-background text-on-background antialiased min-h-screen overflow-x-hidden flex flex-col pt-20"
+    >
         <!-- TopNavBar JSON Component -->
         <!-- TopNavBar -->
         <nav
             class="fixed pt-1 top-0 w-full h-[15vh] z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-orange-100/20 dark:border-stone-800 shadow-sm dark:shadow-none font-epilogue font-medium text-sm tracking-wide"
         >
-            <div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
-                <div class="text-2xl font-bold flex gap-10 items-center tracking-tight text-orange-800 dark:text-orange-100">
+            <div
+                class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto"
+            >
+                <div
+                    class="text-2xl font-bold flex gap-10 items-center tracking-tight text-orange-800 dark:text-orange-100"
+                >
                     <img class="size-20" src="src/logo.png" alt="" />
                     FTM
                 </div>
@@ -230,9 +240,12 @@
                 class="relative z-10 max-w-container-max mx-auto w-full px-gutter pt-margin-desktop pb-12 text-center"
             >
                 <h1 class="font-h1 text-h1 text-primary mb-6">Let's Connect</h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-                    Whether you have a question about our programs, want to partner with us, or just want to say hello,
-                    we're here to listen. Your voice matters in our community.
+                <p
+                    class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed"
+                >
+                    Whether you have a question about our programs, want to
+                    partner with us, or just want to say hello, we're here to
+                    listen. Your voice matters in our community.
                 </p>
             </section>
             <!-- Contact Form & Info Layout -->
@@ -246,62 +259,65 @@
                     <div
                         class="absolute top-0 right-0 w-32 h-32 bg-primary-fixed/40 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"
                     ></div>
-                    <h2 class="font-h3 text-h3 text-on-surface mb-8 relative z-10">Send us a message</h2>
-                    <form class="space-y-6 relative z-10">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label
-                                    class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase ml-2"
-                                    >First Name</label
-                                >
-                                <input
-                                    class="w-full bg-surface-container border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary/20 rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface transition-all outline-none"
-                                    placeholder="Jane"
-                                    type="text"
-                                />
-                            </div>
-                            <div>
-                                <label
-                                    class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase ml-2"
-                                    >Last Name</label
-                                >
-                                <input
-                                    class="w-full bg-surface-container border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary/20 rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface transition-all outline-none"
-                                    placeholder="Doe"
-                                    type="text"
-                                />
-                            </div>
-                        </div>
+                    <h2
+                        class="font-h3 text-h3 text-on-surface mb-8 relative z-10"
+                    >
+                        Send us a message
+                    </h2>
+                    <form class="space-y-6 relative z-10" onsubmit="sendMail(event)">
                         <div>
                             <label
                                 class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase ml-2"
-                                >Email Address</label
+                                for="reason"
+                                >Reason for Message</label
                             >
-                            <input
+                            <select
+                                id="reason"
                                 class="w-full bg-surface-container border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary/20 rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface transition-all outline-none"
-                                placeholder="jane@example.com"
-                                type="email"
-                            />
+                                required
+                            >
+                                <option value="" disabled selected>Select a reason...</option>
+                                <option value="General Enquiry">General Enquiry</option>
+                                <option value="Donation">Donation</option>
+                                <option value="Partnership">Partnership</option>
+                                <option value="Volunteering">Volunteering</option>
+                                <option value="Programs & Events">Programs &amp; Events</option>
+                                <option value="Other">Other</option>
+                            </select>
                         </div>
                         <div>
                             <label
                                 class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase ml-2"
-                                >How can we help?</label
+                                for="message"
+                                >Message</label
                             >
                             <textarea
+                                id="message"
                                 class="w-full bg-surface-container border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary/20 rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface transition-all outline-none resize-none"
-                                placeholder="Share your thoughts..."
-                                rows="4"
+                                placeholder="Write your message here..."
+                                rows="6"
+                                required
                             ></textarea>
                         </div>
                         <button
                             class="w-full bg-primary text-on-primary font-label-caps text-label-caps uppercase py-4 rounded-full hover:scale-[1.02] transition-transform duration-300 mt-4 flex items-center justify-center gap-2 shadow-sm"
-                            type="button"
+                            type="submit"
                         >
                             <span>Send Message</span>
                             <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </button>
                     </form>
+                    <script>
+                        function sendMail(e) {
+                            e.preventDefault();
+                            var reason = document.getElementById('reason').value;
+                            var message = document.getElementById('message').value;
+                            var mailto = 'mailto:forthemenstruatorsftm@gmail.com'
+                                + '?subject=' + encodeURIComponent(reason)
+                                + '&body=' + encodeURIComponent(message);
+                            window.location.href = mailto;
+                        }
+                    </script>
                 </div>
                 <!-- Right Column: Info & Details -->
                 <div class="lg:col-span-5 flex flex-col gap-6">
@@ -312,11 +328,19 @@
                         <div
                             class="bg-primary text-on-primary p-3 rounded-full flex-shrink-0 group-hover:scale-110 transition-transform"
                         >
-                            <span class="material-symbols-outlined fill-icon">mail</span>
+                            <span class="material-symbols-outlined fill-icon"
+                                >mail</span
+                            >
                         </div>
                         <div>
-                            <h3 class="font-h3 text-h3 text-primary-container mb-1 text-xl">Email Us</h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant mb-2">
+                            <h3
+                                class="font-h3 text-h3 text-primary-container mb-1 text-xl"
+                            >
+                                Email Us
+                            </h3>
+                            <p
+                                class="font-body-md text-body-md text-on-surface-variant mb-2"
+                            >
                                 For general inquiries and support.
                             </p>
                             <a
@@ -333,41 +357,62 @@
                         <div
                             class="bg-tertiary-container text-on-tertiary-fixed-variant p-3 rounded-full flex-shrink-0 group-hover:scale-110 transition-transform"
                         >
-                            <span class="material-symbols-outlined fill-icon">location_on</span>
+                            <span class="material-symbols-outlined fill-icon"
+                                >location_on</span
+                            >
                         </div>
                         <div>
-                            <h3 class="font-h3 text-h3 text-on-tertiary-fixed-variant mb-1 text-xl">Community Base</h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant mb-2">
-                                We operate globally with community hubs anchored in major cities.
+                            <h3
+                                class="font-h3 text-h3 text-on-tertiary-fixed-variant mb-1 text-xl"
+                            >
+                                Community Base
+                            </h3>
+                            <p
+                                class="font-body-md text-body-md text-on-surface-variant mb-2"
+                            >
+                                We operate globally with community hubs anchored
+                                in major cities.
                             </p>
-                            <p class="font-body-md text-body-md font-semibold text-tertiary-container">
-                                New York &amp; London
+                            <p
+                                class="font-body-md text-body-md font-semibold text-tertiary-container"
+                            >
+                                Mombasa, Kenya
                             </p>
                         </div>
                     </div>
                     <!-- Socials Card -->
                     <div class="bg-surface-container-high rounded-3xl p-8">
-                        <h3 class="font-h3 text-h3 text-on-surface mb-4 text-xl">Join the Conversation</h3>
+                        <h3
+                            class="font-h3 text-h3 text-on-surface mb-4 text-xl"
+                        >
+                            Join the Conversation
+                        </h3>
                         <div class="flex gap-4">
                             <a
                                 class="w-12 h-12 bg-surface border border-outline-variant rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-300"
                                 href="#"
                             >
-                                <span class="material-symbols-outlined">public</span>
+                                <span class="material-symbols-outlined"
+                                    >public</span
+                                >
                                 <!-- Using globe for social placeholder -->
                             </a>
                             <a
                                 class="w-12 h-12 bg-surface border border-outline-variant rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-300"
                                 href="#"
                             >
-                                <span class="material-symbols-outlined">photo_camera</span>
+                                <span class="material-symbols-outlined"
+                                    >photo_camera</span
+                                >
                                 <!-- Using camera for visual social placeholder -->
                             </a>
                             <a
                                 class="w-12 h-12 bg-surface border border-outline-variant rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-300"
                                 href="#"
                             >
-                                <span class="material-symbols-outlined">forum</span>
+                                <span class="material-symbols-outlined"
+                                    >forum</span
+                                >
                                 <!-- Using chat for text social placeholder -->
                             </a>
                         </div>
@@ -375,14 +420,18 @@
                 </div>
             </section>
             <!-- FAQ Section -->
-            <section class="relative z-10 w-full bg-surface-container-low py-margin-desktop px-gutter">
+            <section
+                class="relative z-10 w-full bg-surface-container-low py-margin-desktop px-gutter"
+            >
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-12">
                         <span
                             class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-label-caps px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-4"
                             >Support</span
                         >
-                        <h2 class="font-h2 text-h2 text-primary">Common Questions</h2>
+                        <h2 class="font-h2 text-h2 text-primary">
+                            Common Questions
+                        </h2>
                     </div>
                     <div class="space-y-4">
                         <!-- FAQ Item 1 -->
@@ -390,14 +439,23 @@
                             class="bg-surface rounded-2xl p-6 border border-outline-variant/30 ambient-shadow cursor-pointer hover:border-primary/30 transition-colors"
                         >
                             <div class="flex justify-between items-center mb-2">
-                                <h3 class="font-body-lg text-body-lg font-semibold text-on-surface">
+                                <h3
+                                    class="font-body-lg text-body-lg font-semibold text-on-surface"
+                                >
                                     How long does it take to get a response?
                                 </h3>
-                                <span class="material-symbols-outlined text-outline">expand_more</span>
+                                <span
+                                    class="material-symbols-outlined text-outline"
+                                    >expand_more</span
+                                >
                             </div>
-                            <p class="font-body-md text-body-md text-on-surface-variant">
-                                We strive to respond to all inquiries within 48 business hours. During high-volume
-                                periods, it may take slightly longer, but your message is important to us.
+                            <p
+                                class="font-body-md text-body-md text-on-surface-variant"
+                            >
+                                We strive to respond to all inquiries within 48
+                                business hours. During high-volume periods, it
+                                may take slightly longer, but your message is
+                                important to us.
                             </p>
                         </div>
                         <!-- FAQ Item 2 -->
@@ -405,14 +463,22 @@
                             class="bg-surface rounded-2xl p-6 border border-outline-variant/30 ambient-shadow cursor-pointer hover:border-primary/30 transition-colors"
                         >
                             <div class="flex justify-between items-center mb-2">
-                                <h3 class="font-body-lg text-body-lg font-semibold text-on-surface">
+                                <h3
+                                    class="font-body-lg text-body-lg font-semibold text-on-surface"
+                                >
                                     Can I volunteer remotely?
                                 </h3>
-                                <span class="material-symbols-outlined text-outline">expand_more</span>
+                                <span
+                                    class="material-symbols-outlined text-outline"
+                                    >expand_more</span
+                                >
                             </div>
-                            <p class="font-body-md text-body-md text-on-surface-variant">
-                                Yes! We have numerous digital advocacy, content creation, and administrative roles that
-                                can be done from anywhere in the world.
+                            <p
+                                class="font-body-md text-body-md text-on-surface-variant"
+                            >
+                                Yes! We have numerous digital advocacy, content
+                                creation, and administrative roles that can be
+                                done from anywhere in the world.
                             </p>
                         </div>
                         <!-- FAQ Item 3 -->
@@ -420,14 +486,23 @@
                             class="bg-surface rounded-2xl p-6 border border-outline-variant/30 ambient-shadow cursor-pointer hover:border-primary/30 transition-colors"
                         >
                             <div class="flex justify-between items-center mb-2">
-                                <h3 class="font-body-lg text-body-lg font-semibold text-on-surface">
+                                <h3
+                                    class="font-body-lg text-body-lg font-semibold text-on-surface"
+                                >
                                     Where do my donations go?
                                 </h3>
-                                <span class="material-symbols-outlined text-outline">expand_more</span>
+                                <span
+                                    class="material-symbols-outlined text-outline"
+                                    >expand_more</span
+                                >
                             </div>
-                            <p class="font-body-md text-body-md text-on-surface-variant">
-                                Donations directly fund our grassroots distribution of menstrual products and our
-                                educational programs. We maintain full transparency in our annual impact reports.
+                            <p
+                                class="font-body-md text-body-md text-on-surface-variant"
+                            >
+                                Donations directly fund our grassroots
+                                distribution of menstrual products and our
+                                educational programs. We maintain full
+                                transparency in our annual impact reports.
                             </p>
                         </div>
                     </div>
@@ -438,18 +513,26 @@
         <footer
             class="bg-stone-100 dark:bg-stone-950 w-full py-16 px-8 border-t border-stone-200 dark:border-stone-800 mt-auto"
         >
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto"
+            >
                 <!-- Brand Column -->
                 <div class="col-span-1 md:col-span-1">
-                    <span class="text-xl font-semibod text-orange-800 dark:text-orange-100 mb-4 block font-epilogue"
+                    <span
+                        class="text-xl font-semibod text-orange-800 dark:text-orange-100 mb-4 block font-epilogue"
                         >FTM</span
                     >
-                    <p class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400">
-                        Empowering menstruators globally through access, education, and advocacy.
+                    <p
+                        class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400"
+                    >
+                        Empowering menstruators globally through access,
+                        education, and advocacy.
                     </p>
                 </div>
                 <!-- Links Columns -->
-                <div class="col-span-1 md:col-span-2 grid grid-cols-2 gap-8 font-epilogue text-sm leading-relaxed">
+                <div
+                    class="col-span-1 md:col-span-2 grid grid-cols-2 gap-8 font-epilogue text-sm leading-relaxed"
+                >
                     <div class="flex flex-col space-y-3">
                         <a
                             class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors"
@@ -489,7 +572,9 @@
                 </div>
                 <!-- Copyright Column -->
                 <div class="col-span-1 flex flex-col justify-end">
-                    <p class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400">
+                    <p
+                        class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400"
+                    >
                         © 2026 For The Menstruators. All rights reserved.
                     </p>
                 </div>
