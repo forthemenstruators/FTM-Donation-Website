@@ -236,114 +236,30 @@
                             ></div>
                         </div>
                     </div>
-                    <!-- Right: Donation Widget -->
-                    <div class="lg:col-span-5 lg:col-start-8">
+                    <!-- Right: Mobile Money -->
+                    <div class="lg:col-span-5 lg:col-start-8 flex items-center justify-center">
                         <div
-                            class="bg-surface-container rounded-[32px] p-8 md:p-10 shadow-ambient relative overflow-hidden"
+                            class="bg-surface-container rounded-[32px] p-10 md:p-14 shadow-ambient relative overflow-hidden w-full text-center"
                         >
                             <!-- Decorative blur -->
                             <div
                                 class="absolute -top-20 -right-20 w-64 h-64 bg-primary-fixed-dim/40 rounded-full blur-3xl pointer-events-none"
                             ></div>
-                            <h3 class="font-h3 text-h3 text-on-surface mb-6 relative z-10">Choose your impact</h3>
-                            <!-- Donation Frequency -->
-                            <div class="flex gap-4 mb-8 relative z-10 bg-surface-container-high p-1.5 rounded-full">
-                                <button
-                                    class="flex-1 bg-surface py-3 rounded-full font-label-caps text-label-caps uppercase text-primary shadow-sm transition-all"
-                                >
-                                    Monthly
-                                </button>
-                                <button
-                                    class="flex-1 py-3 rounded-full font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-all"
-                                >
-                                    One-time
-                                </button>
-                            </div>
-                            <!-- Tiers Grid -->
-                            <div class="grid grid-cols-2 gap-4 mb-6 relative z-10">
-                                <button
-                                    class="border border-outline-variant bg-surface rounded-2xl py-6 flex flex-col items-center justify-center gap-2 hover:border-primary hover:bg-surface-bright transition-all group"
-                                >
-                                    <span
-                                        class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors"
-                                        >KSh 1,000</span
-                                    >
-                                    <span class="font-body-md text-sm text-on-surface-variant">Education</span>
-                                </button>
-                                <button
-                                    class="border-2 border-primary bg-primary text-on-primary rounded-2xl py-6 flex flex-col items-center justify-center gap-2 shadow-ambient-hover transform scale-[1.02] transition-all"
-                                >
-                                    <span class="font-h3 text-h3">KSh 2,500</span>
-                                    <span class="font-body-md text-sm opacity-90">Care Kits</span>
-                                </button>
-                                <button
-                                    class="border border-outline-variant bg-surface rounded-2xl py-6 flex flex-col items-center justify-center gap-2 hover:border-primary hover:bg-surface-bright transition-all group"
-                                >
-                                    <span
-                                        class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors"
-                                        >KSh 5,000</span
-                                    >
-                                    <span class="font-body-md text-sm text-on-surface-variant">Workshop</span>
-                                </button>
-                                <button
-                                    class="border border-outline-variant bg-surface rounded-2xl py-6 flex flex-col items-center justify-center gap-2 hover:border-primary hover:bg-surface-bright transition-all group"
-                                >
-                                    <span
-                                        class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors"
-                                        >KSh 10,000</span
-                                    >
-                                    <span class="font-body-md text-sm text-on-surface-variant">Expansion</span>
-                                </button>
-                            </div>
-                            <!-- Custom Amount -->
-                            <div class="relative z-10 mb-6">
-                                <label class="sr-only" for="custom-amount">Custom Amount</label>
-                                <div class="relative">
-                                    <span
-                                        class="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-bold text-outline"
-                                        >KSh</span
-                                    >
-                                    <input
-                                        class="w-full bg-surface border border-outline-variant rounded-2xl py-4 pl-16 pr-4 font-body-lg text-body-lg text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline-variant"
-                                        id="custom-amount"
-                                        placeholder="Other amount"
-                                        type="number"
-                                    />
-                                </div>
-                            </div>
-                            <!-- Impact Message -->
-                            <div class="bg-secondary-fixed/50 rounded-xl p-4 mb-8 flex items-start gap-3 relative z-10">
+                            <div class="relative z-10 flex flex-col items-center gap-6">
                                 <span
-                                    class="material-symbols-outlined text-secondary mt-0.5"
-                                    style="font-variation-settings: &quot;FILL&quot; 1"
-                                    >local_florist</span
+                                    class="material-symbols-outlined text-primary"
+                                    style="font-size: 56px; font-variation-settings: 'FILL' 1"
+                                    >smartphone</span
                                 >
-                                <p class="font-body-md text-sm text-on-secondary-container leading-relaxed">
-                                    <strong>KSh 2,500 provides:</strong> Complete, sustainable hygiene kits for two
-                                    individuals, ensuring dignity for an entire cycle.
-                                </p>
-                            </div>
-                            <!-- Mobile Money -->
-                            <div class="space-y-4 relative z-10">
-                                <p
-                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase text-center mb-2"
-                                >
-                                    Send via M-Pesa
-                                </p>
-                                <div
-                                    class="w-full bg-primary/10 border-2 border-primary/30 rounded-2xl py-5 px-6 flex flex-col items-center gap-1"
-                                >
-                                    <span
-                                        class="material-symbols-outlined text-primary text-3xl"
-                                        style="font-variation-settings: &quot;FILL&quot; 1"
-                                        >smartphone</span
+                                <div>
+                                    <p
+                                        class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2"
                                     >
-                                    <p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-1">
-                                        Paybill / Till Number
+                                        Send via M-Pesa
                                     </p>
-                                    <p class="font-h2 text-h2 text-primary tracking-widest">0000000000</p>
+                                    <p class="font-h1 text-h1 text-primary tracking-widest">0000000000</p>
                                 </div>
-                                <p class="text-center text-sm text-on-surface-variant">
+                                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
                                     Send any amount to the number above and we'll confirm your donation.
                                 </p>
                             </div>
