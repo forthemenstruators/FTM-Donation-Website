@@ -1,360 +1,551 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Donate | For The Menstruator</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "tertiary-container": "#687a5c",
-                      "surface-container": "#f3ede9",
-                      "on-surface-variant": "#54433e",
-                      "outline": "#87736d",
-                      "on-primary": "#ffffff",
-                      "secondary": "#92493c",
-                      "tertiary-fixed-dim": "#b9cdaa",
-                      "on-secondary-fixed-variant": "#753227",
-                      "on-secondary-container": "#783529",
-                      "surface-bright": "#fef8f4",
-                      "primary-fixed-dim": "#ffb4a1",
-                      "tertiary-fixed": "#d5e9c5",
-                      "secondary-fixed": "#ffdad4",
-                      "inverse-surface": "#32302e",
-                      "on-surface": "#1d1b19",
-                      "on-tertiary-fixed": "#101f09",
-                      "inverse-on-surface": "#f5f0ec",
-                      "primary-fixed": "#ffdbd2",
-                      "on-error": "#ffffff",
-                      "surface-container-highest": "#e7e1de",
-                      "surface-tint": "#944834",
-                      "surface-variant": "#e7e1de",
-                      "error": "#ba1a1a",
-                      "inverse-primary": "#ffb4a1",
-                      "primary-container": "#af5e48",
-                      "primary": "#914632",
-                      "surface-container-high": "#ede7e3",
-                      "surface-container-low": "#f8f2ef",
-                      "tertiary": "#506145",
-                      "on-primary-fixed": "#3c0800",
-                      "error-container": "#ffdad6",
-                      "secondary-fixed-dim": "#ffb4a6",
-                      "surface-container-lowest": "#ffffff",
-                      "surface": "#fef8f4",
-                      "on-primary-container": "#fffbff",
-                      "secondary-container": "#fea090",
-                      "on-secondary-fixed": "#3c0803",
-                      "on-tertiary-container": "#f8ffee",
-                      "on-tertiary-fixed-variant": "#3b4b31",
-                      "surface-dim": "#ded9d5",
-                      "outline-variant": "#dac1bb",
-                      "on-error-container": "#93000a",
-                      "on-primary-fixed-variant": "#76321f",
-                      "background": "#fef8f4",
-                      "on-background": "#1d1b19",
-                      "on-secondary": "#ffffff",
-                      "on-tertiary": "#ffffff"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "margin-mobile": "16px",
-                      "unit": "8px",
-                      "container-max": "1280px",
-                      "margin-desktop": "64px",
-                      "gutter": "24px"
-              },
-              "fontFamily": {
-                      "body-md": [
-                              "Plus Jakarta Sans"
-                      ],
-                      "label-caps": [
-                              "Plus Jakarta Sans"
-                      ],
-                      "body-lg": [
-                              "Plus Jakarta Sans"
-                      ],
-                      "h3": [
-                              "Epilogue"
-                      ],
-                      "h2": [
-                              "Epilogue"
-                      ],
-                      "h1": [
-                              "Epilogue"
-                      ]
-              },
-              "fontSize": {
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "1.6",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "label-caps": [
-                              "12px",
-                              {
-                                      "lineHeight": "1.0",
-                                      "letterSpacing": "0.08em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "body-lg": [
-                              "18px",
-                              {
-                                      "lineHeight": "1.6",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "h3": [
-                              "28px",
-                              {
-                                      "lineHeight": "1.3",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "h2": [
-                              "36px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "letterSpacing": "-0.01em",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "h1": [
-                              "48px",
-                              {
-                                      "lineHeight": "1.1",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "700"
-                              }
-                      ]
-              }
-      },
-          },
-        }
-    </script>
-<style>
-        /* Ambient Tinted Shadow Utility */
-        .shadow-ambient {
-            box-shadow: 0 24px 48px -12px rgba(182, 99, 77, 0.08);
-        }
-        .shadow-ambient-hover {
-            box-shadow: 0 32px 64px -16px rgba(182, 99, 77, 0.12);
-        }
-        /* Organic shape utility */
-        .rounded-organic {
-            border-radius: 64px 16px 48px 24px;
-        }
-    </style>
-</head>
-<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-orange-100/20 dark:border-stone-800 shadow-sm dark:shadow-none">
-<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
-<a class="text-2xl font-bold tracking-tight text-orange-800 dark:text-orange-100 font-epilogue" href="index.html">FTM</a>
-<div class="hidden md:flex items-center gap-8 font-epilogue font-medium text-sm tracking-wide">
-<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2" href="index.html">Home</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2" href="about_us.html">About Us</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2" href="programs.html">Programs</a>
-<a class="text-stone-600 dark:text-stone-40₀ hover:text-orange-7₀ dark:hover:text-orange-3₀ transition-colors hover:bg-stone-1₀ dark:hover:bg-stone-8₀ rounded-lg transition-all duration-3₀₀ px-3 py-2" href="impact.html">Impact</a>
-<a class="text-orange-8₀ dark:text-orange-3₀ border-b-2 border-orange-7₀ pb-1 font-semibold px-3 py-2" href="get_involved.html">Get Involved</a>
-<a class="text-stone-6₀ dark:text-stone-4₀ hover:text-orange-7₀ dark:hover:text-orange-3₀ transition-colors hover:bg-stone-1₀ dark:hover:bg-stone-8₀ rounded-lg transition-all duration-3₀₀ px-3 py=2" href="contact.html">Contact</a>
-</div>
-<button class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:scale-105 transition-transform duration-300 shadow-ambient">
-                Donate
-            </button>
-</div>
-</nav>
-<main class="pt-[120px] pb-margin-desktop">
-<!-- Hero & Donation Split -->
-<section class="max-w-container-max mx-auto px-gutter mb-margin-desktop">
-<div class="grid lg:grid-cols-12 gap-12 items-center">
-<!-- Left: Emotional Appeal -->
-<div class="lg:col-span-6 space-y-8">
-<span class="inline-flex items-center gap-2 bg-secondary-fixed text-on-secondary-fixed-variant px-4 py-2 rounded-full font-label-caps text-label-caps uppercase">
-<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
-                        Your Support Matters
-                    </span>
-<h1 class="font-h1 text-h1 text-primary">Dignity is a right, not a privilege.</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-                        Your contribution directly empowers menstruators by providing essential products, critical education, and safe spaces. Join us in breaking the cycle of period poverty with quiet strength and unwavering empathy.
+<html class="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Donate | For The Menstruator</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet"
+        />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "tertiary-container": "#687a5c",
+                            "surface-container": "#f3ede9",
+                            "on-surface-variant": "#54433e",
+                            outline: "#87736d",
+                            "on-primary": "#ffffff",
+                            secondary: "#92493c",
+                            "tertiary-fixed-dim": "#b9cdaa",
+                            "on-secondary-fixed-variant": "#753227",
+                            "on-secondary-container": "#783529",
+                            "surface-bright": "#fef8f4",
+                            "primary-fixed-dim": "#ffb4a1",
+                            "tertiary-fixed": "#d5e9c5",
+                            "secondary-fixed": "#ffdad4",
+                            "inverse-surface": "#32302e",
+                            "on-surface": "#1d1b19",
+                            "on-tertiary-fixed": "#101f09",
+                            "inverse-on-surface": "#f5f0ec",
+                            "primary-fixed": "#ffdbd2",
+                            "on-error": "#ffffff",
+                            "surface-container-highest": "#e7e1de",
+                            "surface-tint": "#944834",
+                            "surface-variant": "#e7e1de",
+                            error: "#ba1a1a",
+                            "inverse-primary": "#ffb4a1",
+                            "primary-container": "#af5e48",
+                            primary: "#914632",
+                            "surface-container-high": "#ede7e3",
+                            "surface-container-low": "#f8f2ef",
+                            tertiary: "#506145",
+                            "on-primary-fixed": "#3c0800",
+                            "error-container": "#ffdad6",
+                            "secondary-fixed-dim": "#ffb4a6",
+                            "surface-container-lowest": "#ffffff",
+                            surface: "#fef8f4",
+                            "on-primary-container": "#fffbff",
+                            "secondary-container": "#fea090",
+                            "on-secondary-fixed": "#3c0803",
+                            "on-tertiary-container": "#f8ffee",
+                            "on-tertiary-fixed-variant": "#3b4b31",
+                            "surface-dim": "#ded9d5",
+                            "outline-variant": "#dac1bb",
+                            "on-error-container": "#93000a",
+                            "on-primary-fixed-variant": "#76321f",
+                            background: "#fef8f4",
+                            "on-background": "#1d1b19",
+                            "on-secondary": "#ffffff",
+                            "on-tertiary": "#ffffff",
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                        spacing: {
+                            "margin-mobile": "16px",
+                            unit: "8px",
+                            "container-max": "1280px",
+                            "margin-desktop": "64px",
+                            gutter: "24px",
+                        },
+                        fontFamily: {
+                            "body-md": ["Plus Jakarta Sans"],
+                            "label-caps": ["Plus Jakarta Sans"],
+                            "body-lg": ["Plus Jakarta Sans"],
+                            h3: ["Epilogue"],
+                            h2: ["Epilogue"],
+                            h1: ["Epilogue"],
+                        },
+                        fontSize: {
+                            "body-md": [
+                                "16px",
+                                {
+                                    lineHeight: "1.6",
+                                    fontWeight: "400",
+                                },
+                            ],
+                            "label-caps": [
+                                "12px",
+                                {
+                                    lineHeight: "1.0",
+                                    letterSpacing: "0.08em",
+                                    fontWeight: "700",
+                                },
+                            ],
+                            "body-lg": [
+                                "18px",
+                                {
+                                    lineHeight: "1.6",
+                                    fontWeight: "400",
+                                },
+                            ],
+                            h3: [
+                                "28px",
+                                {
+                                    lineHeight: "1.3",
+                                    fontWeight: "600",
+                                },
+                            ],
+                            h2: [
+                                "36px",
+                                {
+                                    lineHeight: "1.2",
+                                    letterSpacing: "-0.01em",
+                                    fontWeight: "600",
+                                },
+                            ],
+                            h1: [
+                                "48px",
+                                {
+                                    lineHeight: "1.1",
+                                    letterSpacing: "-0.02em",
+                                    fontWeight: "700",
+                                },
+                            ],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            /* Ambient Tinted Shadow Utility */
+            .shadow-ambient {
+                box-shadow: 0 24px 48px -12px rgba(182, 99, 77, 0.08);
+            }
+            .shadow-ambient-hover {
+                box-shadow: 0 32px 64px -16px rgba(182, 99, 77, 0.12);
+            }
+            /* Organic shape utility */
+            .rounded-organic {
+                border-radius: 64px 16px 48px 24px;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden"
+    >
+        <!-- TopNavBar -->
+        <nav
+            class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-orange-100/20 dark:border-stone-800 shadow-sm dark:shadow-none"
+        >
+            <div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+                <a
+                    class="text-2xl font-bold tracking-tight text-orange-800 dark:text-orange-100 font-epilogue"
+                    href="index.html"
+                    >FTM</a
+                >
+                <div class="hidden md:flex items-center gap-8 font-epilogue font-medium text-sm tracking-wide">
+                    <a
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2"
+                        href="index.html"
+                        >Home</a
+                    >
+                    <a
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2"
+                        href="about_us.html"
+                        >About Us</a
+                    >
+                    <a
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2"
+                        href="programs.html"
+                        >Programs</a
+                    >
+                    <a
+                        class="text-stone-600 dark:text-stone-40₀ hover:text-orange-7₀ dark:hover:text-orange-3₀ transition-colors hover:bg-stone-1₀ dark:hover:bg-stone-8₀ rounded-lg transition-all duration-3₀₀ px-3 py-2"
+                        href="impact.html"
+                        >Impact</a
+                    >
+                    <a
+                        class="text-orange-8₀ dark:text-orange-3₀ border-b-2 border-orange-7₀ pb-1 font-semibold px-3 py-2"
+                        href="get_involved.html"
+                        >Get Involved</a
+                    >
+                    <a
+                        class="text-stone-6₀ dark:text-stone-4₀ hover:text-orange-7₀ dark:hover:text-orange-3₀ transition-colors hover:bg-stone-1₀ dark:hover:bg-stone-8₀ rounded-lg transition-all duration-3₀₀ px-3 py=2"
+                        href="contact.html"
+                        >Contact</a
+                    >
+                </div>
+                <button
+                    class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:scale-105 transition-transform duration-300 shadow-ambient"
+                >
+                    Donate
+                </button>
+            </div>
+        </nav>
+        <main class="pt-[120px] pb-margin-desktop">
+            <!-- Hero & Donation Split -->
+            <section class="max-w-container-max mx-auto px-gutter mb-margin-desktop">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left: Emotional Appeal -->
+                    <div class="lg:col-span-6 space-y-8">
+                        <span
+                            class="inline-flex items-center gap-2 bg-secondary-fixed text-on-secondary-fixed-variant px-4 py-2 rounded-full font-label-caps text-label-caps uppercase"
+                        >
+                            <span
+                                class="material-symbols-outlined text-[16px]"
+                                style="font-variation-settings: &quot;FILL&quot; 1"
+                                >volunteer_activism</span
+                            >
+                            Your Support Matters
+                        </span>
+                        <h1 class="font-h1 text-h1 text-primary">Dignity is a right, not a privilege.</h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                            Your contribution directly empowers menstruators by providing essential products, critical
+                            education, and safe spaces. Join us in breaking the cycle of period poverty with quiet
+                            strength and unwavering empathy.
+                        </p>
+                        <div class="relative w-full aspect-[4/3] mt-8 rounded-organic overflow-hidden shadow-ambient">
+                            <img
+                                alt="softly lit portrait of diverse women smiling warmly outdoors in a sun-dappled park, evoking empathy and community strength"
+                                class="object-cover w-full h-full opacity-90 mix-blend-multiply bg-surface-container"
+                                data-alt="softly lit portrait of diverse women smiling warmly outdoors in a sun-dappled park, evoking empathy and community strength"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUDXE6iBB7DftDwbC10xevP9CtzZLlEFRU2lv4YCda21WYK1A57pRdUvUFrRDMACzNtwBuyHhQHPHhy5SGrSbodQVql2HtzkiQ0Lpk4m2ASl207MVaRa5gMbJUvvg46uhUO3x4GHFmr9AAT7eXQxaqlJWVSFRWWgyDrzOvdghez3EdyM2j_nwPsDLBf7IqUjVKXt8noMFRoJ2LkRieIlZIXrdbYVYML5auCzBPv_h_kGD0b2I9-Njz7HxCQveOEIOpMJNSDuYaK4SL"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"
+                            ></div>
+                        </div>
+                    </div>
+                    <!-- Right: Donation Widget -->
+                    <div class="lg:col-span-5 lg:col-start-8">
+                        <div
+                            class="bg-surface-container rounded-[32px] p-8 md:p-10 shadow-ambient relative overflow-hidden"
+                        >
+                            <!-- Decorative blur -->
+                            <div
+                                class="absolute -top-20 -right-20 w-64 h-64 bg-primary-fixed-dim/40 rounded-full blur-3xl pointer-events-none"
+                            ></div>
+                            <h3 class="font-h3 text-h3 text-on-surface mb-6 relative z-10">Choose your impact</h3>
+                            <!-- Donation Frequency -->
+                            <div class="flex gap-4 mb-8 relative z-10 bg-surface-container-high p-1.5 rounded-full">
+                                <button
+                                    class="flex-1 bg-surface py-3 rounded-full font-label-caps text-label-caps uppercase text-primary shadow-sm transition-all"
+                                >
+                                    Monthly
+                                </button>
+                                <button
+                                    class="flex-1 py-3 rounded-full font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-all"
+                                >
+                                    One-time
+                                </button>
+                            </div>
+                            <!-- Tiers Grid -->
+                            <div class="grid grid-cols-2 gap-4 mb-6 relative z-10">
+                                <button
+                                    class="border border-outline-variant bg-surface rounded-2xl py-6 flex flex-col items-center justify-center gap-2 hover:border-primary hover:bg-surface-bright transition-all group"
+                                >
+                                    <span
+                                        class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors"
+                                        >$10</span
+                                    >
+                                    <span class="font-body-md text-sm text-on-surface-variant">Education</span>
+                                </button>
+                                <button
+                                    class="border-2 border-primary bg-primary text-on-primary rounded-2xl py-6 flex flex-col items-center justify-center gap-2 shadow-ambient-hover transform scale-[1.02] transition-all"
+                                >
+                                    <span class="font-h3 text-h3">$25</span>
+                                    <span class="font-body-md text-sm opacity-90">Care Kits</span>
+                                </button>
+                                <button
+                                    class="border border-outline-variant bg-surface rounded-2xl py-6 flex flex-col items-center justify-center gap-2 hover:border-primary hover:bg-surface-bright transition-all group"
+                                >
+                                    <span
+                                        class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors"
+                                        >$50</span
+                                    >
+                                    <span class="font-body-md text-sm text-on-surface-variant">Workshop</span>
+                                </button>
+                                <button
+                                    class="border border-outline-variant bg-surface rounded-2xl py-6 flex flex-col items-center justify-center gap-2 hover:border-primary hover:bg-surface-bright transition-all group"
+                                >
+                                    <span
+                                        class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors"
+                                        >$100</span
+                                    >
+                                    <span class="font-body-md text-sm text-on-surface-variant">Expansion</span>
+                                </button>
+                            </div>
+                            <!-- Custom Amount -->
+                            <div class="relative z-10 mb-6">
+                                <label class="sr-only" for="custom-amount">Custom Amount</label>
+                                <div class="relative">
+                                    <span class="absolute left-4 top-1/2 -translate-y-1/2 font-h3 text-h3 text-outline"
+                                        >$</span
+                                    >
+                                    <input
+                                        class="w-full bg-surface border border-outline-variant rounded-2xl py-4 pl-12 pr-4 font-body-lg text-body-lg text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline-variant"
+                                        id="custom-amount"
+                                        placeholder="Other amount"
+                                        type="number"
+                                    />
+                                </div>
+                            </div>
+                            <!-- Impact Message -->
+                            <div class="bg-secondary-fixed/50 rounded-xl p-4 mb-8 flex items-start gap-3 relative z-10">
+                                <span
+                                    class="material-symbols-outlined text-secondary mt-0.5"
+                                    style="font-variation-settings: &quot;FILL&quot; 1"
+                                    >local_florist</span
+                                >
+                                <p class="font-body-md text-sm text-on-secondary-container leading-relaxed">
+                                    <strong>$25 provides:</strong> Complete, sustainable hygiene kits for two
+                                    individuals, ensuring dignity for an entire cycle.
+                                </p>
+                            </div>
+                            <!-- Payment Methods Placeholder -->
+                            <div class="space-y-4 relative z-10">
+                                <p
+                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase text-center mb-2"
+                                >
+                                    Secure Payment
+                                </p>
+                                <button
+                                    class="w-full bg-primary text-on-primary py-4 rounded-full font-label-caps text-label-caps uppercase tracking-wider hover:scale-[1.02] transition-transform shadow-ambient flex justify-center items-center gap-2"
+                                >
+                                    <span
+                                        class="material-symbols-outlined"
+                                        style="font-variation-settings: &quot;FILL&quot; 1"
+                                        >lock</span
+                                    >
+                                    Donate Now
+                                </button>
+                                <div class="flex gap-3 justify-center pt-2">
+                                    <div
+                                        class="w-16 h-10 bg-surface rounded border border-outline-variant flex items-center justify-center text-xs font-bold text-outline"
+                                    >
+                                        CARD
+                                    </div>
+                                    <div
+                                        class="w-16 h-10 bg-surface rounded border border-outline-variant flex items-center justify-center text-xs font-bold text-outline"
+                                    >
+                                        PAYPAL
+                                    </div>
+                                    <div
+                                        class="w-16 h-10 bg-surface rounded border border-outline-variant flex items-center justify-center text-xs font-bold text-outline"
+                                    >
+                                        APPLE
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Impact Bento Grid -->
+            <section class="max-w-container-max mx-auto px-gutter mb-margin-desktop py-margin-desktop">
+                <div class="text-center mb-12">
+                    <h2 class="font-h2 text-h2 text-primary mb-4">Where your support goes</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        Transparency is our promise. Every dollar is carefully allocated to maximize impact and preserve
+                        dignity.
                     </p>
-<div class="relative w-full aspect-[4/3] mt-8 rounded-organic overflow-hidden shadow-ambient">
-<img alt="softly lit portrait of diverse women smiling warmly outdoors in a sun-dappled park, evoking empathy and community strength" class="object-cover w-full h-full opacity-90 mix-blend-multiply bg-surface-container" data-alt="softly lit portrait of diverse women smiling warmly outdoors in a sun-dappled park, evoking empathy and community strength" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUDXE6iBB7DftDwbC10xevP9CtzZLlEFRU2lv4YCda21WYK1A57pRdUvUFrRDMACzNtwBuyHhQHPHhy5SGrSbodQVql2HtzkiQ0Lpk4m2ASl207MVaRa5gMbJUvvg46uhUO3x4GHFmr9AAT7eXQxaqlJWVSFRWWgyDrzOvdghez3EdyM2j_nwPsDLBf7IqUjVKXt8noMFRoJ2LkRieIlZIXrdbYVYML5auCzBPv_h_kGD0b2I9-Njz7HxCQveOEIOpMJNSDuYaK4SL"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
-</div>
-</div>
-<!-- Right: Donation Widget -->
-<div class="lg:col-span-5 lg:col-start-8">
-<div class="bg-surface-container rounded-[32px] p-8 md:p-10 shadow-ambient relative overflow-hidden">
-<!-- Decorative blur -->
-<div class="absolute -top-20 -right-20 w-64 h-64 bg-primary-fixed-dim/40 rounded-full blur-3xl pointer-events-none"></div>
-<h3 class="font-h3 text-h3 text-on-surface mb-6 relative z-10">Choose your impact</h3>
-<!-- Donation Frequency -->
-<div class="flex gap-4 mb-8 relative z-10 bg-surface-container-high p-1.5 rounded-full">
-<button class="flex-1 bg-surface py-3 rounded-full font-label-caps text-label-caps uppercase text-primary shadow-sm transition-all">Monthly</button>
-<button class="flex-1 py-3 rounded-full font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-all">One-time</button>
-</div>
-<!-- Tiers Grid -->
-<div class="grid grid-cols-2 gap-4 mb-6 relative z-10">
-<button class="border border-outline-variant bg-surface rounded-2xl py-6 flex flex-col items-center justify-center gap-2 hover:border-primary hover:bg-surface-bright transition-all group">
-<span class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">$10</span>
-<span class="font-body-md text-sm text-on-surface-variant">Education</span>
-</button>
-<button class="border-2 border-primary bg-primary text-on-primary rounded-2xl py-6 flex flex-col items-center justify-center gap-2 shadow-ambient-hover transform scale-[1.02] transition-all">
-<span class="font-h3 text-h3">$25</span>
-<span class="font-body-md text-sm opacity-90">Care Kits</span>
-</button>
-<button class="border border-outline-variant bg-surface rounded-2xl py-6 flex flex-col items-center justify-center gap-2 hover:border-primary hover:bg-surface-bright transition-all group">
-<span class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">$50</span>
-<span class="font-body-md text-sm text-on-surface-variant">Workshop</span>
-</button>
-<button class="border border-outline-variant bg-surface rounded-2xl py-6 flex flex-col items-center justify-center gap-2 hover:border-primary hover:bg-surface-bright transition-all group">
-<span class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors">$100</span>
-<span class="font-body-md text-sm text-on-surface-variant">Expansion</span>
-</button>
-</div>
-<!-- Custom Amount -->
-<div class="relative z-10 mb-6">
-<label class="sr-only" for="custom-amount">Custom Amount</label>
-<div class="relative">
-<span class="absolute left-4 top-1/2 -translate-y-1/2 font-h3 text-h3 text-outline">$</span>
-<input class="w-full bg-surface border border-outline-variant rounded-2xl py-4 pl-12 pr-4 font-body-lg text-body-lg text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline-variant" id="custom-amount" placeholder="Other amount" type="number"/>
-</div>
-</div>
-<!-- Impact Message -->
-<div class="bg-secondary-fixed/50 rounded-xl p-4 mb-8 flex items-start gap-3 relative z-10">
-<span class="material-symbols-outlined text-secondary mt-0.5" style="font-variation-settings: 'FILL' 1;">local_florist</span>
-<p class="font-body-md text-sm text-on-secondary-container leading-relaxed">
-<strong>$25 provides:</strong> Complete, sustainable hygiene kits for two individuals, ensuring dignity for an entire cycle.
-                            </p>
-</div>
-<!-- Payment Methods Placeholder -->
-<div class="space-y-4 relative z-10">
-<p class="font-label-caps text-label-caps text-on-surface-variant uppercase text-center mb-2">Secure Payment</p>
-<button class="w-full bg-primary text-on-primary py-4 rounded-full font-label-caps text-label-caps uppercase tracking-wider hover:scale-[1.02] transition-transform shadow-ambient flex justify-center items-center gap-2">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lock</span>
-                                Donate Now
-                            </button>
-<div class="flex gap-3 justify-center pt-2">
-<div class="w-16 h-10 bg-surface rounded border border-outline-variant flex items-center justify-center text-xs font-bold text-outline">CARD</div>
-<div class="w-16 h-10 bg-surface rounded border border-outline-variant flex items-center justify-center text-xs font-bold text-outline">PAYPAL</div>
-<div class="w-16 h-10 bg-surface rounded border border-outline-variant flex items-center justify-center text-xs font-bold text-outline">APPLE</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Impact Bento Grid -->
-<section class="max-w-container-max mx-auto px-gutter mb-margin-desktop py-margin-desktop">
-<div class="text-center mb-12">
-<h2 class="font-h2 text-h2 text-primary mb-4">Where your support goes</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Transparency is our promise. Every dollar is carefully allocated to maximize impact and preserve dignity.</p>
-</div>
-<div class="grid md:grid-cols-3 gap-6">
-<!-- Card 1 -->
-<div class="bg-surface-container-low rounded-[32px] p-8 shadow-ambient hover:-translate-y-1 transition-transform duration-300">
-<div class="w-12 h-12 bg-tertiary-fixed rounded-full flex items-center justify-center mb-6 text-on-tertiary-fixed">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
-</div>
-<h3 class="font-h3 text-h3 text-primary mb-2">$10</h3>
-<h4 class="font-body-lg text-body-lg font-bold text-on-surface mb-2">Education</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Funds comprehensive menstrual health workshops for one classroom, breaking stigma through knowledge.</p>
-</div>
-<!-- Card 2 -->
-<div class="bg-surface-container-low rounded-[32px] p-8 shadow-ambient hover:-translate-y-1 transition-transform duration-300">
-<div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 text-on-secondary-fixed">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">water_drop</span>
-</div>
-<h3 class="font-h3 text-h3 text-primary mb-2">$25</h3>
-<h4 class="font-body-lg text-body-lg font-bold text-on-surface mb-2">Care Kits</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Assembles and distributes sustainable, high-quality sanitary kits tailored for individual needs and comfort.</p>
-</div>
-<!-- Card 3 -->
-<div class="bg-surface-container-low rounded-[32px] p-8 shadow-ambient hover:-translate-y-1 transition-transform duration-300">
-<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-6 text-on-primary-fixed">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
-</div>
-<h3 class="font-h3 text-h3 text-primary mb-2">$50+</h3>
-<h4 class="font-body-lg text-body-lg font-bold text-on-surface mb-2">Community Expansion</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Helps us establish new safe spaces and partner with local grassroots organizations in underserved areas.</p>
-</div>
-</div>
-</section>
-<!-- FAQ Section -->
-<section class="max-w-4xl mx-auto px-gutter mb-margin-desktop">
-<h2 class="font-h2 text-h2 text-center text-on-surface mb-12">Frequently Asked Questions</h2>
-<div class="space-y-4">
-<div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-surface-container-highest">
-<h4 class="font-body-lg text-body-lg font-bold text-primary flex justify-between items-center cursor-pointer">
-                        How much of my donation goes directly to programs?
-                        <span class="material-symbols-outlined text-outline">expand_more</span>
-</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mt-4 pr-8">
-                        We pride ourselves on radical transparency. 85% of all donations go directly towards our on-the-ground programs, including kit distribution and educational workshops. The remaining 15% sustains our operational infrastructure, allowing us to reach more communities efficiently.
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-surface-container-low rounded-[32px] p-8 shadow-ambient hover:-translate-y-1 transition-transform duration-300"
+                    >
+                        <div
+                            class="w-12 h-12 bg-tertiary-fixed rounded-full flex items-center justify-center mb-6 text-on-tertiary-fixed"
+                        >
+                            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1"
+                                >menu_book</span
+                            >
+                        </div>
+                        <h3 class="font-h3 text-h3 text-primary mb-2">$10</h3>
+                        <h4 class="font-body-lg text-body-lg font-bold text-on-surface mb-2">Education</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Funds comprehensive menstrual health workshops for one classroom, breaking stigma through
+                            knowledge.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-surface-container-low rounded-[32px] p-8 shadow-ambient hover:-translate-y-1 transition-transform duration-300"
+                    >
+                        <div
+                            class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 text-on-secondary-fixed"
+                        >
+                            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1"
+                                >water_drop</span
+                            >
+                        </div>
+                        <h3 class="font-h3 text-h3 text-primary mb-2">$25</h3>
+                        <h4 class="font-body-lg text-body-lg font-bold text-on-surface mb-2">Care Kits</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Assembles and distributes sustainable, high-quality sanitary kits tailored for individual
+                            needs and comfort.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-surface-container-low rounded-[32px] p-8 shadow-ambient hover:-translate-y-1 transition-transform duration-300"
+                    >
+                        <div
+                            class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-6 text-on-primary-fixed"
+                        >
+                            <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1"
+                                >groups</span
+                            >
+                        </div>
+                        <h3 class="font-h3 text-h3 text-primary mb-2">$50+</h3>
+                        <h4 class="font-body-lg text-body-lg font-bold text-on-surface mb-2">Community Expansion</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Helps us establish new safe spaces and partner with local grassroots organizations in
+                            underserved areas.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto px-gutter mb-margin-desktop">
+                <h2 class="font-h2 text-h2 text-center text-on-surface mb-12">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-surface-container-highest">
+                        <h4
+                            class="font-body-lg text-body-lg font-bold text-primary flex justify-between items-center cursor-pointer"
+                        >
+                            How much of my donation goes directly to programs?
+                            <span class="material-symbols-outlined text-outline">expand_more</span>
+                        </h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant mt-4 pr-8">
+                            We pride ourselves on radical transparency. 85% of all donations go directly towards our
+                            on-the-ground programs, including kit distribution and educational workshops. The remaining
+                            15% sustains our operational infrastructure, allowing us to reach more communities
+                            efficiently.
+                        </p>
+                    </div>
+                    <div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-surface-container-highest">
+                        <h4
+                            class="font-body-lg text-body-lg font-bold text-primary flex justify-between items-center cursor-pointer"
+                        >
+                            Are my donations tax-deductible?
+                            <span class="material-symbols-outlined text-outline">expand_more</span>
+                        </h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant mt-4 pr-8 hidden">
+                            Yes. For The Menstruator is a registered 501(c)(3) non-profit organization. You will receive
+                            an automated receipt via email immediately after your contribution, which can be used for
+                            tax purposes.
+                        </p>
+                    </div>
+                    <div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-surface-container-highest">
+                        <h4
+                            class="font-body-lg text-body-lg font-bold text-primary flex justify-between items-center cursor-pointer"
+                        >
+                            Can I donate physical products instead of money?
+                            <span class="material-symbols-outlined text-outline">expand_more</span>
+                        </h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant mt-4 pr-8 hidden">
+                            Absolutely. We accept un-opened, factory-sealed menstrual products at our regional drop-off
+                            locations. Please visit our "Get Involved" page to find a physical donation center near you.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer
+            class="bg-stone-100 dark:bg-stone-950 text-orange-800 dark:text-orange-200 font-epilogue text-sm leading-relaxed w-full py-16 px-8 border-t border-stone-200 dark:border-stone-800"
+        >
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+                <div class="md:col-span-1">
+                    <span class="text-xl font-bold text-orange-800 dark:text-orange-100 mb-4 block">FTM</span>
+                    <p class="text-stone-500 dark:text-stone-400 mt-4">
+                        Empowering menstruators through dignity, education, and community support.
                     </p>
-</div>
-<div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-surface-container-highest">
-<h4 class="font-body-lg text-body-lg font-bold text-primary flex justify-between items-center cursor-pointer">
-                        Are my donations tax-deductible?
-                        <span class="material-symbols-outlined text-outline">expand_more</span>
-</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mt-4 pr-8 hidden">
-                        Yes. For The Menstruator is a registered 501(c)(3) non-profit organization. You will receive an automated receipt via email immediately after your contribution, which can be used for tax purposes.
+                </div>
+                <div class="md:col-span-2 grid grid-cols-2 gap-8">
+                    <div class="flex flex-col gap-3">
+                        <a
+                            class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                            href="#"
+                            >Home</a
+                        >
+                        <a
+                            class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                            href="#"
+                            >About Us</a
+                        >
+                        <a
+                            class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                            href="#"
+                            >Programs</a
+                        >
+                        <a
+                            class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                            href="#"
+                            >Impact</a
+                        >
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <a
+                            class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                            href="#"
+                            >Get Involved</a
+                        >
+                        <a
+                            class="text-orange-800 dark:text-orange-300 font-bold focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                            href="#"
+                            >Donate</a
+                        >
+                        <a
+                            class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                            href="#"
+                            >Contact</a
+                        >
+                        <a
+                            class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                            href="#"
+                            >Privacy Policy</a
+                        >
+                    </div>
+                </div>
+                <div class="md:col-span-1 flex flex-col justify-end">
+                    <p class="text-stone-500 dark:text-stone-400 mt-auto">
+                        © 2024 For The Menstruator. All rights reserved.
                     </p>
-</div>
-<div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-surface-container-highest">
-<h4 class="font-body-lg text-body-lg font-bold text-primary flex justify-between items-center cursor-pointer">
-                        Can I donate physical products instead of money?
-                        <span class="material-symbols-outlined text-outline">expand_more</span>
-</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mt-4 pr-8 hidden">
-                        Absolutely. We accept un-opened, factory-sealed menstrual products at our regional drop-off locations. Please visit our "Get Involved" page to find a physical donation center near you.
-                    </p>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-stone-100 dark:bg-stone-950 text-orange-800 dark:text-orange-200 font-epilogue text-sm leading-relaxed w-full py-16 px-8 border-t border-stone-200 dark:border-stone-800">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
-<div class="md:col-span-1">
-<span class="text-xl font-bold text-orange-800 dark:text-orange-100 mb-4 block">FTM</span>
-<p class="text-stone-500 dark:text-stone-400 mt-4">Empowering menstruators through dignity, education, and community support.</p>
-</div>
-<div class="md:col-span-2 grid grid-cols-2 gap-8">
-<div class="flex flex-col gap-3">
-<a class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2" href="#">Home</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2" href="#">About Us</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2" href="#">Programs</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2" href="#">Impact</a>
-</div>
-<div class="flex flex-col gap-3">
-<a class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2" href="#">Get Involved</a>
-<a class="text-orange-800 dark:text-orange-300 font-bold focus:ring-2 focus:ring-orange-500 focus:ring-offset-2" href="#">Donate</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2" href="#">Contact</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2" href="#">Privacy Policy</a>
-</div>
-</div>
-<div class="md:col-span-1 flex flex-col justify-end">
-<p class="text-stone-500 dark:text-stone-400 mt-auto">© 2024 For The Menstruator. All rights reserved.</p>
-</div>
-</div>
-</footer>
-</body></html>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

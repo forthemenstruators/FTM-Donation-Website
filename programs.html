@@ -1,372 +1,536 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Programs - For The Menstruator</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Theme Config -->
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary-container": "#687a5c",
-                    "surface-container": "#f3ede9",
-                    "on-surface-variant": "#54433e",
-                    "outline": "#87736d",
-                    "on-primary": "#ffffff",
-                    "secondary": "#92493c",
-                    "tertiary-fixed-dim": "#b9cdaa",
-                    "on-secondary-fixed-variant": "#753227",
-                    "on-secondary-container": "#783529",
-                    "surface-bright": "#fef8f4",
-                    "primary-fixed-dim": "#ffb4a1",
-                    "tertiary-fixed": "#d5e9c5",
-                    "secondary-fixed": "#ffdad4",
-                    "inverse-surface": "#32302e",
-                    "on-surface": "#1d1b19",
-                    "on-tertiary-fixed": "#101f09",
-                    "inverse-on-surface": "#f5f0ec",
-                    "primary-fixed": "#ffdbd2",
-                    "on-error": "#ffffff",
-                    "surface-container-highest": "#e7e1de",
-                    "surface-tint": "#944834",
-                    "surface-variant": "#e7e1de",
-                    "error": "#ba1a1a",
-                    "inverse-primary": "#ffb4a1",
-                    "primary-container": "#af5e48",
-                    "primary": "#914632",
-                    "surface-container-high": "#ede7e3",
-                    "surface-container-low": "#f8f2ef",
-                    "tertiary": "#506145",
-                    "on-primary-fixed": "#3c0800",
-                    "error-container": "#ffdad6",
-                    "secondary-fixed-dim": "#ffb4a6",
-                    "surface-container-lowest": "#ffffff",
-                    "surface": "#fef8f4",
-                    "on-primary-container": "#fffbff",
-                    "secondary-container": "#fea090",
-                    "on-secondary-fixed": "#3c0803",
-                    "on-tertiary-container": "#f8ffee",
-                    "on-tertiary-fixed-variant": "#3b4b31",
-                    "surface-dim": "#ded9d5",
-                    "outline-variant": "#dac1bb",
-                    "on-error-container": "#93000a",
-                    "on-primary-fixed-variant": "#76321f",
-                    "background": "#fef8f4",
-                    "on-background": "#1d1b19",
-                    "on-secondary": "#ffffff",
-                    "on-tertiary": "#ffffff"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px",
-                    "2xl": "1rem",
-                    "3xl": "1.5rem"
-            },
-            "spacing": {
-                    "margin-mobile": "16px",
-                    "unit": "8px",
-                    "container-max": "1280px",
-                    "margin-desktop": "64px",
-                    "gutter": "24px"
-            },
-            "fontFamily": {
-                    "body-md": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "label-caps": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "body-lg": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "h3": [
-                            "Epilogue"
-                    ],
-                    "h2": [
-                            "Epilogue"
-                    ],
-                    "h1": [
-                            "Epilogue"
-                    ]
-            },
-            "fontSize": {
-                    "body-md": [
-                            "16px",
-                            {
-                                    "lineHeight": "1.6",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "label-caps": [
-                            "12px",
-                            {
-                                    "lineHeight": "1.0",
-                                    "letterSpacing": "0.08em",
-                                    "fontWeight": "700"
-                            }
-                    ],
-                    "body-lg": [
-                            "18px",
-                            {
-                                    "lineHeight": "1.6",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "h3": [
-                            "28px",
-                            {
-                                    "lineHeight": "1.3",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "h2": [
-                            "36px",
-                            {
-                                    "lineHeight": "1.2",
-                                    "letterSpacing": "-0.01em",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "h1": [
-                            "48px",
-                            {
-                                    "lineHeight": "1.1",
-                                    "letterSpacing": "-0.02em",
-                                    "fontWeight": "700"
-                            }
-                    ]
+<html class="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Programs - For The Menstruator</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+            rel="stylesheet"
+        />
+        <!-- Material Symbols -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <!-- Tailwind Theme Config -->
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "tertiary-container": "#687a5c",
+                            "surface-container": "#f3ede9",
+                            "on-surface-variant": "#54433e",
+                            outline: "#87736d",
+                            "on-primary": "#ffffff",
+                            secondary: "#92493c",
+                            "tertiary-fixed-dim": "#b9cdaa",
+                            "on-secondary-fixed-variant": "#753227",
+                            "on-secondary-container": "#783529",
+                            "surface-bright": "#fef8f4",
+                            "primary-fixed-dim": "#ffb4a1",
+                            "tertiary-fixed": "#d5e9c5",
+                            "secondary-fixed": "#ffdad4",
+                            "inverse-surface": "#32302e",
+                            "on-surface": "#1d1b19",
+                            "on-tertiary-fixed": "#101f09",
+                            "inverse-on-surface": "#f5f0ec",
+                            "primary-fixed": "#ffdbd2",
+                            "on-error": "#ffffff",
+                            "surface-container-highest": "#e7e1de",
+                            "surface-tint": "#944834",
+                            "surface-variant": "#e7e1de",
+                            error: "#ba1a1a",
+                            "inverse-primary": "#ffb4a1",
+                            "primary-container": "#af5e48",
+                            primary: "#914632",
+                            "surface-container-high": "#ede7e3",
+                            "surface-container-low": "#f8f2ef",
+                            tertiary: "#506145",
+                            "on-primary-fixed": "#3c0800",
+                            "error-container": "#ffdad6",
+                            "secondary-fixed-dim": "#ffb4a6",
+                            "surface-container-lowest": "#ffffff",
+                            surface: "#fef8f4",
+                            "on-primary-container": "#fffbff",
+                            "secondary-container": "#fea090",
+                            "on-secondary-fixed": "#3c0803",
+                            "on-tertiary-container": "#f8ffee",
+                            "on-tertiary-fixed-variant": "#3b4b31",
+                            "surface-dim": "#ded9d5",
+                            "outline-variant": "#dac1bb",
+                            "on-error-container": "#93000a",
+                            "on-primary-fixed-variant": "#76321f",
+                            background: "#fef8f4",
+                            "on-background": "#1d1b19",
+                            "on-secondary": "#ffffff",
+                            "on-tertiary": "#ffffff",
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                            "2xl": "1rem",
+                            "3xl": "1.5rem",
+                        },
+                        spacing: {
+                            "margin-mobile": "16px",
+                            unit: "8px",
+                            "container-max": "1280px",
+                            "margin-desktop": "64px",
+                            gutter: "24px",
+                        },
+                        fontFamily: {
+                            "body-md": ["Plus Jakarta Sans"],
+                            "label-caps": ["Plus Jakarta Sans"],
+                            "body-lg": ["Plus Jakarta Sans"],
+                            h3: ["Epilogue"],
+                            h2: ["Epilogue"],
+                            h1: ["Epilogue"],
+                        },
+                        fontSize: {
+                            "body-md": [
+                                "16px",
+                                {
+                                    lineHeight: "1.6",
+                                    fontWeight: "400",
+                                },
+                            ],
+                            "label-caps": [
+                                "12px",
+                                {
+                                    lineHeight: "1.0",
+                                    letterSpacing: "0.08em",
+                                    fontWeight: "700",
+                                },
+                            ],
+                            "body-lg": [
+                                "18px",
+                                {
+                                    lineHeight: "1.6",
+                                    fontWeight: "400",
+                                },
+                            ],
+                            h3: [
+                                "28px",
+                                {
+                                    lineHeight: "1.3",
+                                    fontWeight: "600",
+                                },
+                            ],
+                            h2: [
+                                "36px",
+                                {
+                                    lineHeight: "1.2",
+                                    letterSpacing: "-0.01em",
+                                    fontWeight: "600",
+                                },
+                            ],
+                            h1: [
+                                "48px",
+                                {
+                                    lineHeight: "1.1",
+                                    letterSpacing: "-0.02em",
+                                    fontWeight: "700",
+                                },
+                            ],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .shadow-ambient {
+                box-shadow: 0 20px 40px -15px rgba(182, 99, 77, 0.08);
             }
-          }
-        }
-      }
-    </script>
-<style>
-        .shadow-ambient {
-            box-shadow: 0 20px 40px -15px rgba(182, 99, 77, 0.08);
-        }
-    </style>
-</head>
-<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar JSON Implementation -->
-<nav class="bg-stone-50/80 h-[15vh] pt-1 dark:bg-stone-900/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-orange-100/20 dark:border-stone-800 shadow-sm dark:shadow-none">
-<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
-<!-- Brand Logo -->
-<a class="text-2xl flex gap-10 items-center font-bold tracking-tight text-orange-800 dark:text-orange-100 font-epilogue" href="#">
-        <img class="size-20" src="src/logo.png" alt="">
-        FTM
-</a>
-<!-- Navigation Links (Desktop) -->
-<div class="hidden md:flex items-center space-x-2">
-<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 text-[14px] font-bold px-3 py-2" href="index.html">Home</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 text-[14px] font-bold px-3 py-2" href="about.html">About Us</a>
-<!-- Active Navigation -->
-<div class="relative px-4 py-2 flex flex-col justify-center">
-<a class="text-orange-800 dark:text-orange-300 border-b-2 border-orange-700 pb-1 font-semibold hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-1 Active: scale-95 opacity-90 transition-transform" href="programs.html">Programs</a>
-</div>
-<!-- <a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2" href="impact.html">Impact</a>
+        </style>
+    </head>
+    <body
+        class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container"
+    >
+        <!-- TopNavBar JSON Implementation -->
+        <nav
+            class="bg-stone-50/80 h-[15vh] pt-1 dark:bg-stone-900/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-orange-100/20 dark:border-stone-800 shadow-sm dark:shadow-none"
+        >
+            <div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+                <!-- Brand Logo -->
+                <a
+                    class="text-2xl flex gap-10 items-center font-bold tracking-tight text-orange-800 dark:text-orange-100 font-epilogue"
+                    href="#"
+                >
+                    <img class="size-20" src="src/logo.png" alt="" />
+                    FTM
+                </a>
+                <!-- Navigation Links (Desktop) -->
+                <div class="hidden md:flex items-center space-x-2">
+                    <a
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 text-[14px] font-bold px-3 py-2"
+                        href="index.html"
+                        >Home</a
+                    >
+                    <a
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 text-[14px] font-bold px-3 py-2"
+                        href="about.html"
+                        >About Us</a
+                    >
+                    <!-- Active Navigation -->
+                    <div class="relative px-4 py-2 flex flex-col justify-center">
+                        <a
+                            class="text-orange-800 dark:text-orange-300 border-b-2 border-orange-700 pb-1 font-semibold hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-1 Active: scale-95 opacity-90 transition-transform"
+                            href="programs.html"
+                            >Programs</a
+                        >
+                    </div>
+                    <!-- <a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2" href="impact.html">Impact</a>
 <a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2" href="get_involved.html">Get Involved</a> -->
-<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 text-[14px] font-bold px-3 py-2" href="contact.html">Contact</a>
-</div>
-<!-- Trailing Action -->
-<button class="bg-primary text-on-primary font-epilogue font-medium text-sm tracking-wide px-6 py-2.5 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 shadow-ambient active:scale-95 flex items-center gap-2">
-                Donate
-            </button>
-<!-- Mobile Menu Button (Icon) -->
-<button class="md:hidden text-orange-800 dark:text-orange-200 p-2 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-all duration-300">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
-</button>
-</div>
-</nav>
-<!-- Main Content Canvas -->
-<main class="pt-24 pb-16">
-<!-- Hero Section -->
-<section class="relative px-8 py-20 md:py-32 max-w-container-max mx-auto text-center flex flex-col items-center justify-center overflow-hidden rounded-3xl mb-16">
-<!-- Decorative Background Blob -->
-<div class="absolute inset-0 bg-surface-container-low opacity-50 -z-10 rounded-3xl pointer-events-none"></div>
-<div class="absolute top-[-20%] left-[-10%] w-[40%] h-[60%] bg-secondary-fixed/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-<div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[70%] bg-tertiary-fixed/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-6 inline-block bg-secondary-fixed px-4 py-1.5 rounded-full">Our Core Initiatives</span>
-<h1 class="font-h1 text-h1 text-primary mb-6 max-w-4xl mx-auto leading-tight">
-                Empowering Minds,<br/>Restoring Dignity.
-            </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
-                We believe that menstrual health is a fundamental human right. Through education, access to resources, and open dialogue, our programs are designed to dismantle stigma and build sustainable support systems in communities worldwide.
-            </p>
-</section>
-<!-- Programs Bento Grid -->
-<section class="px-8 max-w-container-max mx-auto mb-24">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8 auto-rows-min">
-<!-- Program 1: Education (Spans full width top) -->
-<div class="md:col-span-12 bg-surface-container rounded-[32px] p-8 md:p-12 shadow-ambient flex flex-col md:flex-row gap-12 items-center">
-<div class="w-full md:w-1/2 aspect-video md:aspect-[4/3] rounded-[24px] overflow-hidden bg-surface-variant relative shadow-sm">
-<img alt="" class="w-full h-full object-cover" data-alt="" src="src/image-5.png"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-</div>
-<div class="w-full md:w-1/2 flex flex-col justify-center">
-<div class="flex items-center gap-3 mb-4">
-<span class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
-</span>
-<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Education</span>
-</div>
-<h2 class="font-h2 text-h2 text-primary mb-4">Menstrual Health Education</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                            Comprehensive, culturally sensitive workshops designed for young menstruators to understand their bodies. We cover biology, hygiene management, and debunk harmful local myths to foster a positive relationship with menstruation.
-                        </p>
-<div class="bg-surface rounded-[20px] p-6 border border-outline-variant/30">
-<h4 class="font-h3 text-[20px] font-semibold text-on-surface mb-3 flex items-center gap-2">
-<span class="material-symbols-outlined text-tertiary">check_circle</span>
-                                Objectives &amp; Outcomes
-                            </h4>
-<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">arrow_right</span>
-<span><strong>Objective:</strong> Equip youth with accurate biological knowledge and safe hygiene practices.</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">arrow_right</span>
-<span><strong>Outcome:</strong> Increased school attendance by 40% among participants during their cycles.</span>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- Program 2: Pad Making (Half width) -->
-<div class="md:col-span-6 bg-surface-container rounded-[32px] p-8 shadow-ambient flex flex-col h-full">
-<div class="flex items-center gap-3 mb-6">
-<span class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
-</span>
-<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Sustainability</span>
-</div>
-<h3 class="font-h3 text-h3 text-primary mb-4">Reusable Pad Making Workshops</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
-                        Teaching communities how to sew their own high-quality, reusable sanitary pads using locally sourced, affordable materials. This promotes environmental sustainability while ensuring long-term menstrual product independence.
-                    </p>
-<div class="bg-surface rounded-[20px] p-6 border border-outline-variant/30 mb-8">
-<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">done</span>
-<span><strong>Objective:</strong> Create localized micro-economies and sustainable product access.</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">done</span>
-<span><strong>Outcome:</strong> 500+ individuals trained, reducing single-use plastic waste significantly.</span>
-</li>
-</ul>
-</div>
-</div>
-<!-- Program 3: Outreach & Distribution (Half width) -->
-<div class="md:col-span-6 bg-primary-container rounded-[32px] p-8 shadow-ambient flex flex-col h-full text-on-primary-container relative overflow-hidden">
-<!-- Subtle background texture/blob for the dark card -->
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-3xl opacity-50 -z-0 translate-x-1/3 -translate-y-1/3"></div>
-<div class="relative z-10 flex flex-col h-full">
-<div class="flex items-center gap-3 mb-6">
-<span class="w-10 h-10 rounded-full bg-surface/20 backdrop-blur-sm flex items-center justify-center text-on-primary-container">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
-</span>
-<span class="font-label-caps text-label-caps text-surface uppercase tracking-widest opacity-90">Direct Action</span>
-</div>
-<h3 class="font-h3 text-h3 text-on-primary mb-4">Community Outreach &amp; Distribution</h3>
-<p class="font-body-md text-body-md text-surface-container-low opacity-90 mb-8 flex-grow">
-                            We travel to remote and underserved areas to distribute free, high-quality sanitary products. These events are paired with rapid-education sessions and health screenings to ensure immediate needs are met with dignity.
-                        </p>
-<div class="bg-primary/30 backdrop-blur-md rounded-[20px] p-6 border border-white/10 mb-8">
-<ul class="space-y-3 font-body-md text-body-md text-on-primary-container">
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-surface text-[18px] mt-0.5">favorite</span>
-<span><strong>Objective:</strong> Provide immediate relief to those experiencing period poverty.</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-surface text-[18px] mt-0.5">favorite</span>
-<span><strong>Outcome:</strong> Over 10,000 supply kits distributed annually in marginalized regions.</span>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- Program 4: Open Discussions (Spans full width bottom) -->
-<div class="md:col-span-12 bg-surface rounded-[32px] p-8 md:p-12 shadow-ambient border border-outline-variant/30 flex flex-col md:flex-row-reverse gap-12 items-center">
-<div class="w-full md:w-5/12 aspect-square rounded-full overflow-hidden bg-surface-variant relative shadow-sm border-8 border-surface-container-low">
-<img alt="Diverse group of women sitting outdoors having a warm, supportive conversation, laughing and sharing stories, soft golden hour light." class="w-full h-full object-cover" data-alt="Diverse group of women sitting outdoors having a warm, supportive conversation, laughing and sharing stories, soft golden hour light." src="src/image-6.jpeg"/>
-</div>
-<div class="w-full md:w-7/12 flex flex-col justify-center">
-<div class="flex items-center gap-3 mb-4">
-<span class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">forum</span>
-</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Advocacy</span>
-</div>
-<h2 class="font-h2 text-h2 text-primary mb-4">Open Discussions to End Stigma</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-xl">
-                            Creating safe, inclusive spaces for intergenerational dialogue. We invite community leaders, parents, and youth to discuss menstruation openly, challenging taboos and fostering a supportive environment that normalizes the menstrual cycle.
-                        </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<div class="bg-surface-container rounded-[20px] p-5 flex-1 shadow-sm">
-<h4 class="font-label-caps text-label-caps text-primary mb-2 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">target</span>
-                                    Our Objective
-                                </h4>
-<p class="font-body-md text-body-md text-on-surface-variant text-sm">
-                                    Normalize menstruation in the broader community dialogue and eliminate shame associated with periods.
-                                </p>
-</div>
-<div class="bg-surface-container rounded-[20px] p-5 flex-1 shadow-sm">
-<h4 class="font-label-caps text-label-caps text-tertiary mb-2 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">trending_up</span>
-                                    Expected Outcome
-                                </h4>
-<p class="font-body-md text-body-md text-on-surface-variant text-sm">
-                                    Shifted cultural attitudes, indicated by a 60% increase in self-reported comfort discussing reproductive health at home.
-                                </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer JSON Implementation -->
-<footer class="bg-stone-100 dark:bg-stone-950 w-full py-16 px-8 border-t border-stone-200 dark:border-stone-800">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
-<!-- Brand Column -->
-<div class="flex flex-col">
-<span class="text-xl font-bold text-orange-800 dark:text-orange-100 mb-4 block font-epilogue">FTM</span>
-<p class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 mt-auto">
-                    © 2026 For The Menstruators. All rights reserved.
+                    <a
+                        class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 text-[14px] font-bold px-3 py-2"
+                        href="contact.html"
+                        >Contact</a
+                    >
+                </div>
+                <!-- Trailing Action -->
+                <button
+                    class="bg-primary text-on-primary font-epilogue font-medium text-sm tracking-wide px-6 py-2.5 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 shadow-ambient active:scale-95 flex items-center gap-2"
+                >
+                    Donate
+                </button>
+                <!-- Mobile Menu Button (Icon) -->
+                <button
+                    class="md:hidden text-orange-800 dark:text-orange-200 p-2 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-all duration-300"
+                >
+                    <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 0"
+                        >menu</span
+                    >
+                </button>
+            </div>
+        </nav>
+        <!-- Main Content Canvas -->
+        <main class="pt-24 pb-16">
+            <!-- Hero Section -->
+            <section
+                class="relative px-8 py-20 md:py-32 max-w-container-max mx-auto text-center flex flex-col items-center justify-center overflow-hidden rounded-3xl mb-16"
+            >
+                <!-- Decorative Background Blob -->
+                <div
+                    class="absolute inset-0 bg-surface-container-low opacity-50 -z-10 rounded-3xl pointer-events-none"
+                ></div>
+                <div
+                    class="absolute top-[-20%] left-[-10%] w-[40%] h-[60%] bg-secondary-fixed/30 rounded-full blur-3xl -z-10 pointer-events-none"
+                ></div>
+                <div
+                    class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[70%] bg-tertiary-fixed/30 rounded-full blur-3xl -z-10 pointer-events-none"
+                ></div>
+                <span
+                    class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-6 inline-block bg-secondary-fixed px-4 py-1.5 rounded-full"
+                    >Our Core Initiatives</span
+                >
+                <h1 class="font-h1 text-h1 text-primary mb-6 max-w-4xl mx-auto leading-tight">
+                    Empowering Minds,<br />Restoring Dignity.
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                    We believe that menstrual health is a fundamental human right. Through education, access to
+                    resources, and open dialogue, our programs are designed to dismantle stigma and build sustainable
+                    support systems in communities worldwide.
                 </p>
-</div>
-<!-- Links Column 1 -->
-<div class="flex flex-col space-y-3">
-<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit" href="#">Home</a>
-<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit" href="#">About Us</a>
-<!-- Active Link in Footer (Programs) -->
-<a class="font-epilogue text-sm leading-relaxed text-orange-800 dark:text-orange-300 font-bold focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit" href="#">Programs</a>
-<!-- <a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit" href="#">Impact</a>
-</div> -->
-<!-- Links Column 2 -->
-<div class="flex flex-col space-y-3">
-<!-- <a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit" href="#">Get Involved</a> -->
-<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit" href="#">Donate</a>
-<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit" href="#">Contact</a>
-</div>
-<!-- Legal/Misc Column -->
-<div class="flex flex-col space-y-3">
-<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit" href="#">Privacy Policy</a>
-</div>
-</div>
-</footer>
-</body></html>
+            </section>
+            <!-- Programs Bento Grid -->
+            <section class="px-8 max-w-container-max mx-auto mb-24">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 auto-rows-min">
+                    <!-- Program 1: Education (Spans full width top) -->
+                    <div
+                        class="md:col-span-12 bg-surface-container rounded-[32px] p-8 md:p-12 shadow-ambient flex flex-col md:flex-row gap-12 items-center"
+                    >
+                        <div
+                            class="w-full md:w-1/2 aspect-video md:aspect-[4/3] rounded-[24px] overflow-hidden bg-surface-variant relative shadow-sm"
+                        >
+                            <img alt="" class="w-full h-full object-cover" data-alt="" src="src/image-5.png" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        </div>
+                        <div class="w-full md:w-1/2 flex flex-col justify-center">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span
+                                    class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary"
+                                >
+                                    <span
+                                        class="material-symbols-outlined"
+                                        style="font-variation-settings: &quot;FILL&quot; 1"
+                                        >school</span
+                                    >
+                                </span>
+                                <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest"
+                                    >Education</span
+                                >
+                            </div>
+                            <h2 class="font-h2 text-h2 text-primary mb-4">Menstrual Health Education</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                Comprehensive, culturally sensitive workshops designed for young menstruators to
+                                understand their bodies. We cover biology, hygiene management, and debunk harmful local
+                                myths to foster a positive relationship with menstruation.
+                            </p>
+                            <div class="bg-surface rounded-[20px] p-6 border border-outline-variant/30">
+                                <h4
+                                    class="font-h3 text-[20px] font-semibold text-on-surface mb-3 flex items-center gap-2"
+                                >
+                                    <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                                    Objectives &amp; Outcomes
+                                </h4>
+                                <ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-secondary text-[18px] mt-0.5"
+                                            >arrow_right</span
+                                        >
+                                        <span
+                                            ><strong>Objective:</strong> Equip youth with accurate biological knowledge
+                                            and safe hygiene practices.</span
+                                        >
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-secondary text-[18px] mt-0.5"
+                                            >arrow_right</span
+                                        >
+                                        <span
+                                            ><strong>Outcome:</strong> Increased school attendance by 40% among
+                                            participants during their cycles.</span
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program 2: Pad Making (Half width) -->
+                    <div
+                        class="md:col-span-6 bg-surface-container rounded-[32px] p-8 shadow-ambient flex flex-col h-full"
+                    >
+                        <div class="flex items-center gap-3 mb-6">
+                            <span
+                                class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary"
+                            >
+                                <span
+                                    class="material-symbols-outlined"
+                                    style="font-variation-settings: &quot;FILL&quot; 1"
+                                    >eco</span
+                                >
+                            </span>
+                            <span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest"
+                                >Sustainability</span
+                            >
+                        </div>
+                        <h3 class="font-h3 text-h3 text-primary mb-4">Reusable Pad Making Workshops</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Teaching communities how to sew their own high-quality, reusable sanitary pads using locally
+                            sourced, affordable materials. This promotes environmental sustainability while ensuring
+                            long-term menstrual product independence.
+                        </p>
+                        <div class="bg-surface rounded-[20px] p-6 border border-outline-variant/30 mb-8">
+                            <ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">done</span>
+                                    <span
+                                        ><strong>Objective:</strong> Create localized micro-economies and sustainable
+                                        product access.</span
+                                    >
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">done</span>
+                                    <span
+                                        ><strong>Outcome:</strong> 500+ individuals trained, reducing single-use plastic
+                                        waste significantly.</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Program 3: Outreach & Distribution (Half width) -->
+                    <div
+                        class="md:col-span-6 bg-primary-container rounded-[32px] p-8 shadow-ambient flex flex-col h-full text-on-primary-container relative overflow-hidden"
+                    >
+                        <!-- Subtle background texture/blob for the dark card -->
+                        <div
+                            class="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-3xl opacity-50 -z-0 translate-x-1/3 -translate-y-1/3"
+                        ></div>
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="flex items-center gap-3 mb-6">
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface/20 backdrop-blur-sm flex items-center justify-center text-on-primary-container"
+                                >
+                                    <span
+                                        class="material-symbols-outlined"
+                                        style="font-variation-settings: &quot;FILL&quot; 1"
+                                        >volunteer_activism</span
+                                    >
+                                </span>
+                                <span
+                                    class="font-label-caps text-label-caps text-surface uppercase tracking-widest opacity-90"
+                                    >Direct Action</span
+                                >
+                            </div>
+                            <h3 class="font-h3 text-h3 text-on-primary mb-4">Community Outreach &amp; Distribution</h3>
+                            <p class="font-body-md text-body-md text-surface-container-low opacity-90 mb-8 flex-grow">
+                                We travel to remote and underserved areas to distribute free, high-quality sanitary
+                                products. These events are paired with rapid-education sessions and health screenings to
+                                ensure immediate needs are met with dignity.
+                            </p>
+                            <div class="bg-primary/30 backdrop-blur-md rounded-[20px] p-6 border border-white/10 mb-8">
+                                <ul class="space-y-3 font-body-md text-body-md text-on-primary-container">
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-surface text-[18px] mt-0.5"
+                                            >favorite</span
+                                        >
+                                        <span
+                                            ><strong>Objective:</strong> Provide immediate relief to those experiencing
+                                            period poverty.</span
+                                        >
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-surface text-[18px] mt-0.5"
+                                            >favorite</span
+                                        >
+                                        <span
+                                            ><strong>Outcome:</strong> Over 10,000 supply kits distributed annually in
+                                            marginalized regions.</span
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program 4: Open Discussions (Spans full width bottom) -->
+                    <div
+                        class="md:col-span-12 bg-surface rounded-[32px] p-8 md:p-12 shadow-ambient border border-outline-variant/30 flex flex-col md:flex-row-reverse gap-12 items-center"
+                    >
+                        <div
+                            class="w-full md:w-5/12 aspect-square rounded-full overflow-hidden bg-surface-variant relative shadow-sm border-8 border-surface-container-low"
+                        >
+                            <img
+                                alt="Diverse group of women sitting outdoors having a warm, supportive conversation, laughing and sharing stories, soft golden hour light."
+                                class="w-full h-full object-cover"
+                                data-alt="Diverse group of women sitting outdoors having a warm, supportive conversation, laughing and sharing stories, soft golden hour light."
+                                src="src/image-6.jpeg"
+                            />
+                        </div>
+                        <div class="w-full md:w-7/12 flex flex-col justify-center">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span
+                                    class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant"
+                                >
+                                    <span
+                                        class="material-symbols-outlined"
+                                        style="font-variation-settings: &quot;FILL&quot; 1"
+                                        >forum</span
+                                    >
+                                </span>
+                                <span
+                                    class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest"
+                                    >Advocacy</span
+                                >
+                            </div>
+                            <h2 class="font-h2 text-h2 text-primary mb-4">Open Discussions to End Stigma</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-xl">
+                                Creating safe, inclusive spaces for intergenerational dialogue. We invite community
+                                leaders, parents, and youth to discuss menstruation openly, challenging taboos and
+                                fostering a supportive environment that normalizes the menstrual cycle.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <div class="bg-surface-container rounded-[20px] p-5 flex-1 shadow-sm">
+                                    <h4
+                                        class="font-label-caps text-label-caps text-primary mb-2 flex items-center gap-1"
+                                    >
+                                        <span class="material-symbols-outlined text-[16px]">target</span>
+                                        Our Objective
+                                    </h4>
+                                    <p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                                        Normalize menstruation in the broader community dialogue and eliminate shame
+                                        associated with periods.
+                                    </p>
+                                </div>
+                                <div class="bg-surface-container rounded-[20px] p-5 flex-1 shadow-sm">
+                                    <h4
+                                        class="font-label-caps text-label-caps text-tertiary mb-2 flex items-center gap-1"
+                                    >
+                                        <span class="material-symbols-outlined text-[16px]">trending_up</span>
+                                        Expected Outcome
+                                    </h4>
+                                    <p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                                        Shifted cultural attitudes, indicated by a 60% increase in self-reported comfort
+                                        discussing reproductive health at home.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer JSON Implementation -->
+        <footer
+            class="bg-stone-100 dark:bg-stone-950 w-full py-16 px-8 border-t border-stone-200 dark:border-stone-800"
+        >
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+                <!-- Brand Column -->
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold text-orange-800 dark:text-orange-100 mb-4 block font-epilogue"
+                        >FTM</span
+                    >
+                    <p class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 mt-auto">
+                        © 2026 For The Menstruators. All rights reserved.
+                    </p>
+                </div>
+                <!-- Links Column 1 -->
+                <div class="flex flex-col space-y-3">
+                    <a
+                        class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit"
+                        href="#"
+                        >Home</a
+                    >
+                    <a
+                        class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit"
+                        href="#"
+                        >About Us</a
+                    >
+                    <!-- Active Link in Footer (Programs) -->
+                    <a
+                        class="font-epilogue text-sm leading-relaxed text-orange-800 dark:text-orange-300 font-bold focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit"
+                        href="#"
+                        >Programs</a
+                    >
+                    <!-- <a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit" href="#">Impact</a> -->
+                </div>
+                <!-- Links Column 2 -->
+                <div class="flex flex-col space-y-3">
+                    <!-- <a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit" href="#">Get Involved</a> -->
+                    <a
+                        class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit"
+                        href="#"
+                        >Donate</a
+                    >
+                    <a
+                        class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit"
+                        href="#"
+                        >Contact</a
+                    >
+                </div>
+                <!-- Legal/Misc Column -->
+                <div class="flex flex-col space-y-3">
+                    <a
+                        class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded outline-none w-fit"
+                        href="#"
+                        >Privacy Policy</a
+                    >
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
