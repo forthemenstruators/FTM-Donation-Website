@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Impact - For The Menstruator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#687a5c",
+                    "surface-container": "#f3ede9",
+                    "on-surface-variant": "#54433e",
+                    "outline": "#87736d",
+                    "on-primary": "#ffffff",
+                    "secondary": "#92493c",
+                    "tertiary-fixed-dim": "#b9cdaa",
+                    "on-secondary-fixed-variant": "#753227",
+                    "on-secondary-container": "#783529",
+                    "surface-bright": "#fef8f4",
+                    "primary-fixed-dim": "#ffb4a1",
+                    "tertiary-fixed": "#d5e9c5",
+                    "secondary-fixed": "#ffdad4",
+                    "inverse-surface": "#32302e",
+                    "on-surface": "#1d1b19",
+                    "on-tertiary-fixed": "#101f09",
+                    "inverse-on-surface": "#f5f0ec",
+                    "primary-fixed": "#ffdbd2",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e7e1de",
+                    "surface-tint": "#944834",
+                    "surface-variant": "#e7e1de",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#ffb4a1",
+                    "primary-container": "#af5e48",
+                    "primary": "#914632",
+                    "surface-container-high": "#ede7e3",
+                    "surface-container-low": "#f8f2ef",
+                    "tertiary": "#506145",
+                    "on-primary-fixed": "#3c0800",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#ffb4a6",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#fef8f4",
+                    "on-primary-container": "#fffbff",
+                    "secondary-container": "#fea090",
+                    "on-secondary-fixed": "#3c0803",
+                    "on-tertiary-container": "#f8ffee",
+                    "on-tertiary-fixed-variant": "#3b4b31",
+                    "surface-dim": "#ded9d5",
+                    "outline-variant": "#dac1bb",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#76321f",
+                    "background": "#fef8f4",
+                    "on-background": "#1d1b19",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label-caps": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "h3": [
+                            "Epilogue"
+                    ],
+                    "h2": [
+                            "Epilogue"
+                    ],
+                    "h1": [
+                            "Epilogue"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.08em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "h3": [
+                            "28px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "h2": [
+                            "36px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "h1": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20 overflow-x-hidden">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-orange-100/20 dark:border-stone-800 shadow-sm dark:shadow-none hidden md:block">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-orange-800 dark:text-orange-100">
+                FTM
+            </div>
+<div class="flex space-x-6 items-center">
+<a class="font-epilogue font-medium text-sm tracking-wide text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2" href="index.html">Home</a>
+<a class="font-epilogue font-medium text-sm tracking-wide text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2" href="about.html">About Us</a>
+<a class="font-epilogue font-medium text-sm tracking-wide text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2" href="programs.html">Programs</a>
+<a class="font-epilogue font-medium text-sm tracking-wide text-orange-800 dark:text-orange-300 border-b-2 border-orange-700 pb-1 font-semibold hover:bg-stone-100 dark:hover:bg-stone-800 rounded-lg transition-all duration-300 px-3 py-2" href="impact.html">Impact</a>
+<a class="font-epilogue font-medium text-sm tracking-wide text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-30OTH transition-colors hover:bg-stone-1₀₀ dark:hover:bg-stone-8₀₀ rounded-lg transition-all duration-3₀₀ px-3 py-2" href="get_involved.html">Get Involved</a>
+<a class="font-epilogue font-medium text-sm tracking-wide text-stone-6₀₀ dark:text-stone-4₀₀ hover:text-orange-7₀₀ dark:hover:text-orange-3₀₀ transition-colors hover:bg-stone-1₀₀ dark:hover:bg-stone-8₀₀ rounded-lg transition-all duration=3₀₀ px=3 py=2" href="contact.html">Contact</a>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-body-md text-body-md px-6 py-2 rounded-full shadow-[0_8px_30px_rgb(182,99,77,0.08)] transition-transform hover:scale-105 duration-300">
+                    Donate
+                </button>
+</div>
+</div>
+</nav>
+<!-- Mobile Nav (Simplified for example, assumes bottom nav logic per instructions if top level destination) -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-container border-t border-surface-variant md:hidden">
+<div class="flex justify-around items-center h-16">
+<a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-primary" href="#">
+<span class="material-symbols-outlined fill" data-icon="favorite">favorite</span>
+<span class="font-label-caps text-[10px] font-bold">Impact</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="volunteer_activism">volunteer_activism</span>
+<span class="font-label-caps text-[10px]">Donate</span>
+</a>
+</div>
+</nav>
+<main class="pb-20 md:pb-0">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24 flex flex-col items-center text-center">
+<span class="bg-tertiary-container text-on-tertiary-container font-label-caps text-label-caps px-4 py-2 rounded-full mb-6">Our Impact</span>
+<h1 class="font-h1 text-h1 text-primary mb-6 max-w-4xl">Dignity is a Right, Not a Privilege.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10">We believe that menstrual health is foundational to overall well-being, education, and equality. Here is how we are changing the narrative and providing tangible support.</p>
+<img alt="Group of diverse women smiling warmly, conveying a sense of community and support, bright natural lighting, soft focus background" class="w-full h-auto rounded-[32px] object-cover shadow-[0_20px_40px_rgb(182,99,77,0.08)] h-[400px] md:h-[600px]" data-alt="Group of diverse women smiling warmly, conveying a sense of community and support, bright natural lighting, soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPWfMnUTbsz9l9ejba9zfzRzrtREuVCxfcRoEDkIt_cruJJZWGzzOlqSRcGqV1_iLWUOyytprOM16i6hoJh2qZlv0yMVBjK0zrps13ur3I5mPMry4f_fhfX03N4brsI0AlqteaLx35JINp3dYn_uNwBYaQYLygrX8FgXQAmu7o-oxb5wvGQHUKKbJm2jz5XOyCtYk2JWE_hfWIdYjvriLN0VDQv4VXwKwjsAwFsC2Vd0EWE6IvQUfpZ4gRhCEiX6pvpE_O8_0fk0i4"/>
+</section>
+<!-- Stats Bento Grid -->
+<section class="bg-surface-container-low py-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container p-8 rounded-[24px] shadow-[0_12px_32px_rgb(182,99,77,0.05)] flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="local_florist">local_florist</span>
+<h2 class="font-h2 text-h2 text-primary mb-2">50,000+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Care packages distributed to those in need across 12 regions.</p>
+</div>
+<div class="bg-primary-container p-8 rounded-[24px] shadow-[0_12px_32px_rgb(182,99,77,0.1)] flex flex-col justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-on-primary-container text-4xl mb-4" data-icon="school">school</span>
+<h2 class="font-h2 text-h2 text-on-primary-container mb-2">15,000</h2>
+<p class="font-body-md text-body-md opacity-90">Students reached through our educational workshops in local schools.</p>
+</div>
+<div class="bg-tertiary-fixed p-8 rounded-[24px] shadow-[0_12px_32px_rgb(182,99,77,0.05)] flex flex-col justify-center">
+<span class="material-symbols-outlined text-tertiary-container text-4xl mb-4" data-icon="volunteer_activism">volunteer_activism</span>
+<h2 class="font-h2 text-h2 text-tertiary-container mb-2">2,500</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Active volunteers driving change in their local communities.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why It Matters -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2">
+<h3 class="font-h3 text-h3 text-primary mb-6">Why This Matters</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Lack of access to menstrual products and education creates significant barriers. It leads to missed school days, health complications, and a deep sense of shame.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">By addressing menstrual health, we are not just providing products; we are empowering individuals, fostering dignity, and breaking down systemic inequalities.</p>
+<button class="border-2 border-secondary text-secondary hover:bg-secondary hover:text-on-secondary font-body-md text-body-md px-6 py-2 rounded-full transition-all duration-300">
+                        Read Our Full Report
+                    </button>
+</div>
+<div class="w-full md:w-1/2 relative">
+<img alt="Close up of hands gently holding a small plant, symbolizing growth, care, and hope, soft natural lighting" class="w-full h-auto rounded-[40px] object-cover shadow-[0_20px_40px_rgb(182,99,77,0.08)]" data-alt="Close up of hands gently holding a small plant, symbolizing growth, care, and hope, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyxpqtcOa_F3rkDrfLTAkfrGOZG8vd_czqJaiImnli_wEnf0zCX0R9mix1R0VLe-Itbt11EDtV_1Vlo6Lr1o4ImmUj2es0A-Ks4kVZR0p75Sh_sBEWF1VmC7Ce_8ViDIqaHBg-u-NCl2WSJkkoKv31NFLjWOU72-wIVCV-VmElnEL3ik7G1NQw6n06aIA-EFlNb3guYL801q5VB8ninaLAM7hSIHs_qwVM5BqeE2qQkjdaYOnK4Z4YAiMONTHfOtZ70QGrgsXRGIY"/>
+<div class="absolute -bottom-8 -left-8 bg-surface-container-high p-6 rounded-[20px] shadow-[0_12px_24px_rgb(182,99,77,0.1)] max-w-[250px] hidden md:block">
+<p class="font-body-md text-body-md text-on-surface-variant font-bold">"FTM changed how I see myself. I no longer feel ashamed."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline -->
+<section class="bg-surface-bright py-24">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
+<h3 class="font-h3 text-h3 text-primary mb-4">Our Journey of Growth</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">From a small community initiative to a regional movement.</p>
+</div>
+<div class="max-w-4xl mx-auto px-margin-mobile">
+<div class="relative border-l-2 border-surface-variant ml-4 md:ml-0 md:pl-0 pl-8 space-y-12">
+<div class="relative md:flex items-center justify-between md:flex-row-reverse">
+<div class="absolute -left-[41px] md:left-1/2 md:-ml-[9px] w-4 h-4 bg-primary rounded-full border-4 border-surface-bright"></div>
+<div class="md:w-5/12 hidden md:block"></div>
+<div class="md:w-5/12 bg-surface-container p-6 rounded-[16px] shadow-[0_8px_20px_rgb(182,99,77,0.05)]">
+<span class="font-label-caps text-secondary mb-2 block">2020</span>
+<h4 class="font-body-lg text-body-lg text-on-surface font-bold mb-2">The Beginning</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Started as a grassroots movement, assembling first 500 care kits in a living room.</p>
+</div>
+</div>
+<div class="relative md:flex items-center justify-between">
+<div class="absolute -left-[41px] md:left-1/2 md:-ml-[9px] w-4 h-4 bg-tertiary-container rounded-full border-4 border-surface-bright"></div>
+<div class="md:w-5/12 hidden md:block"></div>
+<div class="md:w-5/12 bg-surface-container p-6 rounded-[16px] shadow-[0_8px_20px_rgb(182,99,77,0.05)] md:text-right">
+<span class="font-label-caps text-secondary mb-2 block">2022</span>
+<h4 class="font-body-lg text-body-lg text-on-surface font-bold mb-2">Educational Expansion</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Launched our pilot educational workshop program in 5 local high schools.</p>
+</div>
+</div>
+<div class="relative md:flex items-center justify-between md:flex-row-reverse">
+<div class="absolute -left-[41px] md:left-1/2 md:-ml-[9px] w-4 h-4 bg-primary rounded-full border-4 border-surface-bright"></div>
+<div class="md:w-5/12 hidden md:block"></div>
+<div class="md:w-5/12 bg-surface-container p-6 rounded-[16px] shadow-[0_8px_20px_rgb(182,99,77,0.05)]">
+<span class="font-label-caps text-secondary mb-2 block">2024</span>
+<h4 class="font-body-lg text-body-lg text-on-surface font-bold mb-2">Regional Reach</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Expanded operations to 12 regions, establishing a dedicated volunteer network.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery/Stories Placeholder -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24">
+<h3 class="font-h3 text-h3 text-primary text-center mb-12">Faces of Impact</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square rounded-[20px] overflow-hidden">
+<img alt="Portrait of a young woman smiling confidently outdoors, warm sunlight, shallow depth of field" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Portrait of a young woman smiling confidently outdoors, warm sunlight, shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbuYCClC6o-hCAXvJQX0tBr9hZbZgbAZgrh-if9EMd4FCV4GC27s09SK0QA2JHhVZSGP2Hqtl0Gknkhz41TRgscYOMSgLy8YnnTM-5aFOTsO9XCwpJuE1d69fzyXmM2Uj194OMsr-AyQjN_4Ge8DG54ZC_fqceM6m8PUkYf_zRF45uuTuQLJNqcjU00MgKqVatvvkY8mZTgSJNBNsFK4qXRlkgaT0yASiJ9_ec1J6e8rFl-xKetipk-OIMM3fOu-O8FACsSM32W-nX"/>
+</div>
+<div class="aspect-square rounded-[20px] overflow-hidden md:col-span-2 md:row-span-2">
+<img alt="Group of volunteers packing boxes in a brightly lit community center, focused and collaborative atmosphere" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Group of volunteers packing boxes in a brightly lit community center, focused and collaborative atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdkrf2ZaYOB9iej4GOnmyhNgIne2azGMfSd0YqnlndTSJ0BTxth7kNotSS7wnI3KrWFP26SpOyS_Dt88nw5PCml5m4aPoQvpfc4M8LkOlPI8fByBHKa6bgdD9LEYljtvzZzjiSA40GA200t4Nu6TzFCCej3SoB3j1FcsnX1GodZyYNp9bsxXqsisTtMaTFUy0ojQ_ZGT5O1kue6TY5Te5fvQUGaSUr99B5hVHpb8OqoV1NJhbR3Lay07svladfV9OHjZKAyLnESi7k"/>
+</div>
+<div class="aspect-square rounded-[20px] overflow-hidden">
+<img alt="Close up of hands exchanging a care package, symbolizing giving and receiving, soft lighting" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Close up of hands exchanging a care package, symbolizing giving and receiving, soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARO8ZNwxSWcB6DOhA1_BtbCv7Z2asjMmARV5ezgLBPmUw-IjHKKRbemG27b29MkwUcFox2kwTITS-B1GlS_gjc_NPoTGo7AyBIxypnj61-DElNybNEkIhz9m8jdZHP0HwCtoMLTlxYzHm6MNLZhHcOUBJiQZD0oV9QWi0HtynImKlw1SeM76w8wiElZht4JZYCTBLV2RwFKKlErikBoBTz4YtV0v8KIIAlPMajRTkGAmkCEM_g3yzKRIsSF8xoHFtdoORINiz867qd"/>
+</div>
+<div class="aspect-square rounded-[20px] overflow-hidden">
+<img alt="A young girl sitting at a school desk looking engaged and happy, soft natural window light" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="A young girl sitting at a school desk looking engaged and happy, soft natural window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnG0eFyZBT8Dun8rd6nIb2x3xPCAto0VzQhCqtUbmr8YW9l2vXQ1MOQQ-n7j9Okhaonb2a5js6KW96MP6oQ7hiLsZDib0BDBAFSKE7U-db70sqzRQAK-E35YV2tlT95fi7uQHZ0tsDrXfKkTScD1auodtR53Por7OUSYDToM0IIQoXtSciSw4FUyVufDJ81XN-rsIcn_6W6Ex4_1Xp6BXetQ9xjInvZyZ6QF5kYDVVA1x-KIHSsnZphGGhT-P_aijgi4hqfX7kA9rj"/>
+</div>
+<div class="aspect-square rounded-[20px] overflow-hidden">
+<img alt="Detailed shot of neatly arranged menstrual products and educational pamphlets on a wooden table" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Detailed shot of neatly arranged menstrual products and educational pamphlets on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5WJZ8_Kso6W9UpCbm2_P7P-tcuWeZZZTjv_HvTUPFHWlUoroctdPBw3UK9YzI5qaurH6hkk83DbM1u0tGtsD6wKuGcOaJSOCurFkET1W1ZbcEhQcnRAlQH3_CIyIP1F0w8pBK0CYHuhdKbOEoQiCreAld_da3ewQRvOxw93XWCTPj4__EzooQy5rjx1ZhR425f5_bFRQ5Ibe13EaiRg5PtHU9sVeDo6BbqHHfDzkliKJy-eFDZGgj_IbrC-AtDP-HBb5_D_NILG4R"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full py-16 px-8 border-t border-stone-200 dark:border-stone-800 hidden md:block">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div>
+<span class="text-xl font-bold text-orange-800 dark:text-orange-100 mb-4 block">FTM</span>
+<p class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400">© 2024 For The Menstruator. All rights reserved.</p>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 w-fit" href="#">Home</a>
+<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 w-fit" href="#">About Us</a>
+<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 w-fit" href="#">Programs</a>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="font-epilogue text-sm leading-relaxed text-orange-800 dark:text-orange-300 font-bold hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 w-fit" href="#">Impact</a>
+<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 w-fit" href="#">Get Involved</a>
+<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 w-fit" href="#">Donate</a>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 w-fit" href="#">Contact</a>
+<a class="font-epilogue text-sm leading-relaxed text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 w-fit" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+</body></html>
