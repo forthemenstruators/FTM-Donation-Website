@@ -315,7 +315,12 @@
                             var mailto = 'mailto:forthemenstruatorsftm@gmail.com'
                                 + '?subject=' + encodeURIComponent(reason)
                                 + '&body=' + encodeURIComponent(message);
-                            window.location.href = mailto;
+                            var a = document.createElement('a');
+                            a.href = mailto;
+                            a.target = '_blank';
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
                         }
                     </script>
                 </div>
