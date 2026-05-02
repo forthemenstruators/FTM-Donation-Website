@@ -264,7 +264,7 @@
                     >
                         Send us a message
                     </h2>
-                    <form class="space-y-6 relative z-10" onsubmit="sendMail(event)">
+                    <form class="space-y-6 relative z-10">
                         <div>
                             <label
                                 class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase ml-2"
@@ -276,12 +276,20 @@
                                 class="w-full bg-surface-container border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary/20 rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface transition-all outline-none"
                                 required
                             >
-                                <option value="" disabled selected>Select a reason...</option>
-                                <option value="General Enquiry">General Enquiry</option>
+                                <option value="" disabled selected>
+                                    Select a reason...
+                                </option>
+                                <option value="General Enquiry">
+                                    General Enquiry
+                                </option>
                                 <option value="Donation">Donation</option>
                                 <option value="Partnership">Partnership</option>
-                                <option value="Volunteering">Volunteering</option>
-                                <option value="Programs & Events">Programs &amp; Events</option>
+                                <option value="Volunteering">
+                                    Volunteering
+                                </option>
+                                <option value="Programs & Events">
+                                    Programs &amp; Events
+                                </option>
                                 <option value="Other">Other</option>
                             </select>
                         </div>
@@ -301,23 +309,28 @@
                         </div>
                         <button
                             class="w-full bg-primary text-on-primary font-label-caps text-label-caps uppercase py-4 rounded-full hover:scale-[1.02] transition-transform duration-300 mt-4 flex items-center justify-center gap-2 shadow-sm"
-                            type="submit"
+                            type="button"
+                            onclick="sendMail()"
                         >
                             <span>Send Message</span>
-                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            <span class="material-symbols-outlined text-sm"
+                                >arrow_forward</span
+                            >
                         </button>
                     </form>
                     <script>
-                        function sendMail(e) {
-                            e.preventDefault();
+                        function sendMail() {
                             var reason = document.getElementById('reason').value;
                             var message = document.getElementById('message').value;
+                            if (!reason || !message) {
+                                alert('Please select a reason and write your message.');
+                                return;
+                            }
                             var mailto = 'mailto:forthemenstruatorsftm@gmail.com'
                                 + '?subject=' + encodeURIComponent(reason)
                                 + '&body=' + encodeURIComponent(message);
                             var a = document.createElement('a');
                             a.href = mailto;
-                            a.target = '_blank';
                             document.body.appendChild(a);
                             a.click();
                             document.body.removeChild(a);
