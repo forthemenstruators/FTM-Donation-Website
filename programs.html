@@ -155,6 +155,44 @@
             .shadow-ambient {
                 box-shadow: 0 20px 40px -15px rgba(182, 99, 77, 0.08);
             }
+            @keyframes marquee-scroll {
+                0%   { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+            .gallery-track {
+                display: flex;
+                gap: 16px;
+                width: max-content;
+                animation: marquee-scroll 50s linear infinite;
+                will-change: transform;
+            }
+            .gallery-track:hover {
+                animation-play-state: paused;
+            }
+            .gallery-item {
+                flex-shrink: 0;
+                width: 280px;
+                height: 220px;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 4px 20px rgba(145, 70, 50, 0.10);
+                border: 1px solid rgba(218, 193, 187, 0.35);
+            }
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            @media (max-width: 768px) {
+                .gallery-item {
+                    width: 220px;
+                    height: 170px;
+                }
+                .gallery-track {
+                    animation-duration: 35s;
+                }
+            }
         </style>
     </head>
     <body
@@ -542,6 +580,59 @@
                         </div>
                     </div>
 
+                </div>
+            </section>
+
+            <!-- Panoramic Moving Gallery Section -->
+            <section class="mb-24">
+                <!-- Section Header -->
+                <div class="text-center mb-12 px-8">
+                    <span
+                        class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-6 inline-block bg-secondary-fixed px-4 py-1.5 rounded-full"
+                        >Memory Wall</span
+                    >
+                    <h2 class="font-h2 text-h2 text-primary mt-4">Moments from Our Programs</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-3 max-w-xl mx-auto">
+                        A glimpse into the lives we touch and the communities we uplift.
+                    </p>
+                </div>
+
+                <!-- Scrolling Strip Wrapper -->
+                <div class="w-full overflow-hidden py-4" style="mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);">
+                    <div class="gallery-track">
+                        <!-- Original set of 15 photos -->
+                        <div class="gallery-item"><img src="src/gallery-1.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-2.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-3.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-4.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-5.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-6.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-7.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-8.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-9.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-10.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-11.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/highlight-pad-stitching.png" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/highlight-school-visit.png" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/highlight-author-meet.png" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/sip-and-paint.jpeg" alt="Program moment" /></div>
+                        <!-- Duplicate set for seamless infinite loop -->
+                        <div class="gallery-item"><img src="src/gallery-1.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-2.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-3.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-4.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-5.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-6.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-7.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-8.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-9.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-10.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/gallery-11.jpeg" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/highlight-pad-stitching.png" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/highlight-school-visit.png" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/highlight-author-meet.png" alt="Program moment" /></div>
+                        <div class="gallery-item"><img src="src/sip-and-paint.jpeg" alt="Program moment" /></div>
+                    </div>
                 </div>
             </section>
         </main>
